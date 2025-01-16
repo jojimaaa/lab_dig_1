@@ -1,0 +1,241 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/IntelQuarus_20.1.1.720
+vcircuito_exp3
+Z0 !s110 1736989106
+!i10b 1
+!s100 5G<MCKokjBEVVSfRz3`CH0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IBnal]hNLL6`TeFWb]6EHh1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp03
+w1736988979
+8circuito_exp3.v
+Fcircuito_exp3.v
+!i122 28
+L0 5 65
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1736989106.000000
+!s107 hexa7seg.v|sync_rom_16x4.v|registrador_4.v|comparador_85.v|contador_163.v|exp3_fluxo_dados.v|exp3_unidade_controle.v|circuito_exp3.v|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp03/circuito_exp3_tb.v|
+Z6 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp03/circuito_exp3_tb.v|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+vcircuito_exp3_tb
+R0
+!i10b 1
+!s100 DU7Mjo;0G89V8KVT2GMW^2
+R1
+I<n0a?gKZ9DWd`im5jc;a00
+R2
+R3
+w1736988846
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp03/circuito_exp3_tb.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp03/circuito_exp3_tb.v
+!i122 28
+L0 19 159
+R4
+r1
+!s85 0
+31
+R5
+Z9 !s107 hexa7seg.v|sync_rom_16x4.v|registrador_4.v|comparador_85.v|contador_163.v|exp3_fluxo_dados.v|exp3_unidade_controle.v|circuito_exp3.v|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp03/circuito_exp3_tb.v|
+R6
+!i113 1
+R7
+R8
+vcomparador_85
+R0
+!i10b 1
+!s100 zcNmS?1EFWLj?oBWzOfLQ3
+R1
+Ii0oePW83NX9PVQ8mVY^4Z3
+R2
+R3
+Z10 w1736270516
+8comparador_85.v
+Fcomparador_85.v
+!i122 28
+L0 16 14
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+R8
+vcontador_163
+R0
+!i10b 1
+!s100 IVO117]5VP`?I^0lLY3`50
+R1
+IjWN<9WWEEMTcQU5gSTn2_0
+R2
+R3
+R10
+8contador_163.v
+Fcontador_163.v
+!i122 28
+L0 16 16
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+R8
+vexp3_fluxo_dados
+R0
+!i10b 1
+!s100 _S9:@R]1hU0ES1UEIZBF_3
+R1
+IVjnMN<NKaXFjCM7A6OKRP1
+R2
+R3
+w1736986477
+8exp3_fluxo_dados.v
+Fexp3_fluxo_dados.v
+!i122 28
+L0 6 62
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+R8
+vexp3_fluxo_dados_tb
+!s110 1736989105
+!i10b 1
+!s100 ]70>Z7fokAnl9`i@YN>Yd1
+R1
+Io@0H9QE3hF@Pf=eADeYKe1
+R2
+R3
+w1736983731
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp03/exp3_fluxo_dados_tb.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp03/exp3_fluxo_dados_tb.v
+!i122 24
+L0 19 151
+R4
+r1
+!s85 0
+31
+!s108 1736989105.000000
+!s107 sync_rom_16x4.v|registrador_4.v|comparador_85.v|contador_163.v|exp3_fluxo_dados.v|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp03/exp3_fluxo_dados_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp03/exp3_fluxo_dados_tb.v|
+!i113 1
+R7
+R8
+vexp3_unidade_controle
+R0
+!i10b 1
+!s100 Dilo6T9^H>mMR[UF?noRL0
+R1
+I7B:dm7ERmS1_ij2eUj@nW3
+R2
+R3
+w1736978621
+8exp3_unidade_controle.v
+Fexp3_unidade_controle.v
+!i122 28
+L0 16 66
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+R8
+vhexa7seg
+R0
+!i10b 1
+!s100 ;e0?Jbc=g4g:_U?fa_6fl3
+R1
+I4j:9ghZW87S_hjGWfG]oa3
+R2
+R3
+R10
+8hexa7seg.v
+Fhexa7seg.v
+!i122 28
+L0 23 38
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+R8
+vregistrador_4
+R0
+!i10b 1
+!s100 gXjzhzXZof]BiEo5fmCn?0
+R1
+IBN?aV]n_VO<6`o`ME3<P;1
+R2
+R3
+w1736978623
+8registrador_4.v
+Fregistrador_4.v
+!i122 28
+L0 13 20
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+R8
+vsync_rom_16x4
+R0
+!i10b 1
+!s100 TNR<7aXPWhfiP=Yo8enU61
+R1
+IcYnI:fah0=dP_j5zXe2IG3
+R2
+R3
+w1736978627
+8sync_rom_16x4.v
+Fsync_rom_16x4.v
+!i122 28
+L0 13 27
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 1
+R7
+R8
