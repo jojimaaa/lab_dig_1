@@ -1,0 +1,24 @@
+Quartus Prime Archive log --	C:/Projetos/T2BA3_2025/Exp3/circuito_exp3.qarlog
+
+Archive:	C:/Projetos/T2BA3_2025/Exp3/circuito_exp3.qar
+Date:		Mon Jan 20 10:25:32 2025
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Projetos/T2BA3_2025/Exp3/circuito_exp3.qpf
+C:/Projetos/T2BA3_2025/Exp3/circuito_exp3.qsf
+C:/Projetos/T2BA3_2025/Exp3/circuito_exp3.v
+C:/Projetos/T2BA3_2025/Exp3/circuito_exp3_tb.v
+C:/Projetos/T2BA3_2025/Exp3/comparador_85.v
+C:/Projetos/T2BA3_2025/Exp3/contador_163.v
+C:/Projetos/T2BA3_2025/Exp3/exp3_fluxo_dados.v
+C:/Projetos/T2BA3_2025/Exp3/exp3_fluxo_dados_tb.v
+C:/Projetos/T2BA3_2025/Exp3/exp3_unidade_controle.v
+C:/Projetos/T2BA3_2025/Exp3/hexa7seg.v
+C:/Projetos/T2BA3_2025/Exp3/registrador_4.v
+C:/Projetos/T2BA3_2025/Exp3/sync_rom_16x4.v
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 13 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

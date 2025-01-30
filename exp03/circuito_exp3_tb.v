@@ -14,7 +14,6 @@
 */
 
 `timescale 1ns/1ns
-`include "circuito_exp3.v"
 
 module circuito_exp3_tb;
 
