@@ -3,12 +3,12 @@
 module circuito_exp5_tb2;
 
     // Sinais para conectar com o DUT
-    // valores iniciais para fins de simulacao (ModelSim)
     reg        clock_in   = 1;
     reg        reset_in   = 0;
     reg        iniciar_in = 0;
     reg  [3:0] chaves_in  = 4'b0000;
 
+    // valores iniciais para fins de simulacao (ModelSim)
     wire       acertou_out;
     wire       errou_out  ;
     wire       pronto_out ;
@@ -19,11 +19,16 @@ module circuito_exp5_tb2;
     wire [3:0] db_jogada_out     ;
     wire [3:0] db_endereco_out;
     wire       db_tem_jogada_out ;
-    wire db_jogadaIgualMemoria_out;
-    wire db_enderecoIgualSequencia_out;
+    wire       db_jogadaIgualMemoria_out;
+    wire       db_enderecoIgualSequencia_out;
     wire [3:0] db_sequencia_out;
+    wire       db_fimS_out;
 
-    wire [6:0] display_sequencia_out, display_jogada_out, display_memoria_out, display_endereco_out, display_estado_out;
+    wire [6:0] display_sequencia_out, 
+               display_jogada_out, 
+               display_memoria_out, 
+               display_endereco_out, 
+               display_estado_out;
 
     // Configuração do clock
     parameter clockPeriod = 1_000_000; // in ns, f=1KHz
@@ -36,29 +41,25 @@ module circuito_exp5_tb2;
 
     // instanciacao do DUT (Device Under Test)
     circuito_exp5 DUT (
-        .clock(clock_in),
-        .reset(reset_in),
-        .jogar(iniciar_in),
-        .botoes(chaves_in),
-        .leds(leds_out),
-        .pronto(pronto_out),
-        .ganhou(acertou_out),
-        .perdeu(errou_out),
-        .db_jogadaIgualMemoria(db_jogadaIgualMemoria_out),
-        .db_enderecoIgualSequencia(db_enderecoIgualSequencia_out),
-        .db_tem_jogada(db_tem_jogada_out),  
-        .db_sequencia (db_sequencia_out),
-        .db_endereco (db_endereco_out),
-        .db_memoria (db_memoria_out),
-        .db_estado (db_estado_out),
-        .db_jogada (db_jogada_out),
-        .display_sequencia (display_sequencia_out),
-        .display_jogada (display_jogada_out),
-        .display_memoria (display_memoria_out),
-        .display_endereco (display_endereco_out),
-        .display_estado (display_estado_out),
-        .db_fimS (db_fimS_out)
+      .clock(clock_in),
+      .reset(reset_in),
+      .jogar(iniciar_in),
+      .botoes(chaves_in),
+      .leds(leds_out),
+      .pronto(pronto_out),
+      .ganhou(acertou_out),
+      .perdeu(errou_out),
+      .db_jogadaIgualMemoria(db_jogadaIgualMemoria_out),
+      .db_enderecoIgualSequencia(db_enderecoIgualSequencia_out),
+      .db_tem_jogada(db_tem_jogada_out),
+      .display_sequencia(display_sequencia_out), 
+      .display_jogada(display_jogada_out), 
+      .display_memoria(display_memoria_out), 
+      .display_endereco(display_endereco_out), 
+      .display_estado(display_estado_out),
+      .db_fimS(db_fimS_out)
     );
+
 
     // geracao dos sinais de entrada (estimulos)
     initial begin
