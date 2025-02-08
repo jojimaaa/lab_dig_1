@@ -12,7 +12,6 @@ module fluxo_dados (
  input [3:0] chaves,
  output jogadaIgualMemoria,
  output enderecoIgualSequencia,
- output ledsIgualSequencia, //novo output
  output tem_jogada,
  output fimS,
  output fimLedsOn, //novo output
@@ -29,13 +28,13 @@ module fluxo_dados (
   wire[3:0] s_endereco, 
             s_sequencia, 
             s_memoria, 
-            s_chaves;  // sinal interno para interligacao dos componentes
+            s_chaves,  // sinal interno para interligacao dos componentes
+            s_regLeds; // indica o que o registrador de Leds está guardando
 	
   wire zeraRegLed; //sinal para zerar o registrador de leds
 
   wire      s_tem_jogada, 
-            s_timeout,
-            s_regLeds; // indica o que o registrador de Leds está guardando
+            s_timeout;  
 	 
 	 
     // contador endereço, também usado para o display dos leds
@@ -99,22 +98,9 @@ module fluxo_dados (
       .meio()
     );
 
-
-    // comparador led com o número da sequência
-    comparador_85 comparadorL_S (
-        .A(),
-        .B(),
-        .ALBi(1'b0),
-        .AGBi(1'b0),
-        .AEBi(1'b1),
-        .ALBo(),
-        .AGBo(),
-        .AEBo(ledsIgualSequencia)
-    );
-
     // comparador jogada com memoria
     comparador_85 comparadorJ_M (
-      .A(s_dado),
+      .A(s_memoria),
       .B(s_chaves),
       .ALBi(1'b0),
       .AGBi(1'b0),
@@ -164,6 +150,15 @@ module fluxo_dados (
         .Q(s_regLeds)
     );
 
+    // registrador_4 registra o timeout
+    registrador_1 registradorTimeout (
+        .clock(clock),
+        .clear(zeraR),
+        .enable(s_timeout),
+        .D(s_timeout),
+        .Q(timeout)
+    );
+
 
     // edge_detector
     edge_detector detector (
@@ -180,7 +175,7 @@ module fluxo_dados (
     assign db_memoria = s_memoria;
     assign db_jogada = s_chaves;
     assign db_sequencia = s_sequencia;
-    assign db_timeout = s_timeout;
+    //assign timeout = s_timeout;
     assign leds = s_regLeds;
     assign zeraRegLed = zeraR || estado_ledsOff || estado_espera;
 

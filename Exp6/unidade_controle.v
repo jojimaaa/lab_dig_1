@@ -11,7 +11,6 @@ module unidade_controle (
  input enderecoIgualSequencia,
  input tem_jogada,
  input jogadaIgualMemoria,
- input ledsIgualSequencia, //novo input
  output reg zeraE,
  output reg contaE,
  output reg zeraR,
@@ -80,7 +79,7 @@ module unidade_controle (
             //novos estados - exp6
             leds_on:             Eprox = fimLedsOn ? leds_off : leds_on;
             leds_off:            Eprox = fimLedsOff ? is_ultimo_led : leds_off;
-            is_ultimo_led:       Eprox = ledsIgualSequencia ? zera_endereco : proximo_led;
+            is_ultimo_led:       Eprox = enderecoIgualSequencia ? zera_endereco : proximo_led;
             zera_endereco:       Eprox = espera_jogada;
             proximo_led:         Eprox = leds_on;
             default:             Eprox = inicial;
@@ -93,7 +92,7 @@ module unidade_controle (
         zeraS           = (Eatual == inicial || Eatual == preparacao) ? 1'b1 : 1'b0;
         zeraR           = (Eatual == inicial || Eatual == preparacao) ? 1'b1 : 1'b0;
         registraR       = (Eatual == registra) ? 1'b1 : 1'b0;
-        contaE          = (Eatual == proximo || proximo_led) ? 1'b1 : 1'b0;
+        contaE          = (Eatual == proximo || Eatual == proximo_led) ? 1'b1 : 1'b0;
         contaS          = (Eatual == proxima_sequencia) ? 1'b1 : 1'b0;
         pronto          = (Eatual == final_com_acerto || Eatual == final_com_erro) ? 1'b1 : 1'b0;
 		errou           = (Eatual == final_com_erro) ? 1'b1 : 1'b0;

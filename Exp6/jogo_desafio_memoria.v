@@ -14,6 +14,7 @@ output db_jogadaIgualMemoria,
 output db_enderecoIgualSequencia,
 output db_tem_jogada,
 output db_fimS,
+output db_ledsIgualSequencia,
 
 //display 7 segmentos
 output [6:0] display_sequencia,
@@ -37,7 +38,6 @@ wire w_fimS,
      w_timeout,
      w_enderecoIgualSequencia,
      w_jogadaIgualMemoria,
-     w_ledsIgualSequencia,
      w_tem_jogada,
      w_zeraE,
      w_contaE,
@@ -57,14 +57,13 @@ unidade_controle UC (
  .iniciar(jogar),
  .fimS(w_fimS),
  .fimLedsOn(w_fimLedsOn),  //novo input
- .fimLedsOff(fimLedsOff), //novo input
+ .fimLedsOff(w_fimLedsOff), //novo input
  //input meioE, - caso precise de nível
  //input nivel, - caso precise de nível
  .timeout(w_timeout),
  .enderecoIgualSequencia(w_enderecoIgualSequencia),
  .tem_jogada(w_tem_jogada),
  .jogadaIgualMemoria(w_jogadaIgualMemoria),
- .ledsIgualSequencia(w_ledsIgualSequencia), //novo input
  .zeraE(w_zeraE),
  .contaE(w_contaE),
  .zeraR(w_zeraR),
@@ -95,7 +94,6 @@ fluxo_dados FD (
  .chaves(botoes), //ligação direta no input
  .jogadaIgualMemoria(w_jogadaIgualMemoria),
  .enderecoIgualSequencia(w_enderecoIgualSequencia),
- .ledsIgualSequencia(w_ledsIgualSequencia), //novo output
  .tem_jogada(w_tem_jogada),
  .fimS(w_fimS),
  .fimLedsOn(w_fimLedsOn), //novo output
@@ -110,10 +108,10 @@ fluxo_dados FD (
 );
 
 
+assign timeout = w_timeout;
 //Sinais de depuração
 assign db_tem_jogada = w_tem_jogada;
 assign db_fimS = w_fimS;
-assign db_timeout = w_timeout;
 assign db_jogadaIgualMemoria = w_jogadaIgualMemoria;
 assign db_enderecoIgualSequencia = w_enderecoIgualSequencia;
 
