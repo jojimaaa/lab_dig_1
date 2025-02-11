@@ -1,0 +1,92 @@
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/registrador_4.v {1 {vlog -work work -stats=none C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/registrador_4.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module registrador_4
+
+Top level modules:
+	registrador_4
+
+} {} {}} C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/hexa7seg.v {1 {vlog -work work -stats=none C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/hexa7seg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module hexa7seg
+
+Top level modules:
+	hexa7seg
+
+} {} {}} C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/edge_detector.v {1 {vlog -work work -stats=none C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/edge_detector.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module edge_detector
+
+Top level modules:
+	edge_detector
+
+} {} {}} C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/jogo_tb_desafio2.v {1 {vlog -work work -stats=none C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/jogo_tb_desafio2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module jogo_tb_desafio2
+
+Top level modules:
+	jogo_tb_desafio2
+
+} {} {}} C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/unidade_controle_desafio.v {1 {vlog -work work -stats=none C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/unidade_controle_desafio.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module unidade_controle_desafio
+
+Top level modules:
+	unidade_controle_desafio
+
+} {} {}} C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/fluxo_dados_desafio.v {1 {vlog -work work -stats=none C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/fluxo_dados_desafio.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fluxo_dados_desafio
+
+Top level modules:
+	fluxo_dados_desafio
+
+} {} {}} C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/contador_163.v {1 {vlog -work work -stats=none C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/contador_163.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module contador_163
+
+Top level modules:
+	contador_163
+
+} {} {}} C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/memoria1.v {1 {vlog -work work -stats=none C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/memoria1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module memoria1
+
+Top level modules:
+	memoria1
+
+} {} {}} C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/comparador_85.v {1 {vlog -work work -stats=none C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/comparador_85.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module comparador_85
+
+Top level modules:
+	comparador_85
+
+} {} {}} C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/jogo_desafio_memoria_desafio.v {1 {vlog -work work -stats=none C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/jogo_desafio_memoria_desafio.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module jogo_desafio_memoria_desafio
+
+Top level modules:
+	jogo_desafio_memoria_desafio
+
+} {} {}} C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/sync_rom_16x4.v {1 {vlog -work work -stats=none C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/sync_rom_16x4.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sync_rom_16x4
+
+Top level modules:
+	sync_rom_16x4
+
+} {} {}} C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/contador_m.v {1 {vlog -work work -stats=none C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/contador_m.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module contador_m
+
+Top level modules:
+	contador_m
+
+} {} {}} C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/registrador_1.v {1 {vlog -work work -stats=none C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/registrador_1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module registrador_1
+
+Top level modules:
+	registrador_1
+
+} {} {}}

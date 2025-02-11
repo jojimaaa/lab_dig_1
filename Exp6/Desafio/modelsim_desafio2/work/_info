@@ -1,0 +1,310 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/modelsim_desafio1
+vcomparador_85
+Z0 !s110 1739236768
+!i10b 1
+!s100 bckB8^W=VE]I2a21^PB@D0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I8Pfn:K4A==NijXlVnXd^:0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/modelsim_desafio2
+Z4 w1739120492
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/comparador_85.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/comparador_85.v
+!i122 13
+L0 16 14
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1739236768.000000
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/comparador_85.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/comparador_85.v|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+vcontador_163
+R0
+!i10b 1
+!s100 W_=CLAB[fm@QEF?Lb8hYn1
+R1
+IC`YkfcaU200C[=loIG[Z33
+R2
+R3
+Z9 w1739120493
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/contador_163.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/contador_163.v
+!i122 14
+L0 16 21
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/contador_163.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/contador_163.v|
+!i113 1
+R7
+R8
+vcontador_m
+R0
+!i10b 1
+!s100 kOIBD:YAFLHRD]azYXmX`2
+R1
+I7oPZo493a25lg>GoG1nAW2
+R2
+R3
+R9
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/contador_m.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/contador_m.v
+!i122 15
+L0 20 37
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/contador_m.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/contador_m.v|
+!i113 1
+R7
+R8
+vedge_detector
+R0
+!i10b 1
+!s100 b=6PQ:nFojW4z?d;AGW=D0
+R1
+Ib]KS2`Ko_Q6d]ZkAEA;TK1
+R2
+R3
+R4
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/edge_detector.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/edge_detector.v
+!i122 16
+L0 21 23
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/edge_detector.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/edge_detector.v|
+!i113 1
+R7
+R8
+vfluxo_dados_desafio
+R0
+!i10b 1
+!s100 TnmXLNB]F77cLWK7`K9N31
+R1
+IAPOiz=Rh0bK7BeinQ_II]2
+R2
+R3
+w1739235429
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/fluxo_dados_desafio.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/fluxo_dados_desafio.v
+!i122 17
+L0 1 193
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/fluxo_dados_desafio.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/fluxo_dados_desafio.v|
+!i113 1
+R7
+R8
+vhexa7seg
+R0
+!i10b 1
+!s100 ^ldcN:Zl`^?4Tnh8I@Z332
+R1
+IDnYLmY;;^Qj[AYXEamej?0
+R2
+R3
+R9
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/hexa7seg.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/hexa7seg.v
+!i122 18
+L0 23 38
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/hexa7seg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/hexa7seg.v|
+!i113 1
+R7
+R8
+vjogo_desafio_memoria_desafio
+R0
+!i10b 1
+!s100 `^0?]B133f@3UMETM<=HS0
+R1
+Id=`R^BP1_>n?3Bj^bhaO53
+R2
+R3
+w1739235869
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/jogo_desafio_memoria_desafio.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/jogo_desafio_memoria_desafio.v
+!i122 19
+L0 1 146
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/jogo_desafio_memoria_desafio.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/jogo_desafio_memoria_desafio.v|
+!i113 1
+R7
+R8
+vjogo_tb_desafio2
+Z10 !s110 1739236769
+!i10b 1
+!s100 j;:fW_N5BaUILJQE=[PY93
+R1
+ImhA^k>;ng9@O@`36E1`eE0
+R2
+R3
+w1739236755
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/jogo_tb_desafio2.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/jogo_tb_desafio2.v
+!i122 20
+L0 3 801
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/jogo_tb_desafio2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/jogo_tb_desafio2.v|
+!i113 1
+R7
+R8
+vmemoria1
+R10
+!i10b 1
+!s100 g`Me1hA3FE40`4_:DkLh50
+R1
+Ik39T]7QXYY?ED7ET=DaL73
+R2
+R3
+w1739194050
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/memoria1.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/memoria1.v
+!i122 21
+L0 1 27
+R5
+r1
+!s85 0
+31
+Z11 !s108 1739236769.000000
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/memoria1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/memoria1.v|
+!i113 1
+R7
+R8
+vregistrador_1
+R10
+!i10b 1
+!s100 9fOXC8VHLBbahGJm;_?oC1
+R1
+IERF;cZA9zn;bc5fPXbib73
+R2
+R3
+R9
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/registrador_1.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/registrador_1.v
+!i122 22
+L0 1 20
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/registrador_1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/registrador_1.v|
+!i113 1
+R7
+R8
+vregistrador_4
+R10
+!i10b 1
+!s100 45NaE0zN5R1c;nb0e8L`23
+R1
+In8?5MTcR7>fFGgKTEE_Jg0
+R2
+R3
+R4
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/registrador_4.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/registrador_4.v
+!i122 23
+L0 13 20
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/registrador_4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/registrador_4.v|
+!i113 1
+R7
+R8
+vsync_rom_16x4
+!s110 1739236771
+!i10b 1
+!s100 Tz6@dY^L3ZzVgc74FVX5T1
+R1
+I^=F4mcPlmYZjj8IGV`UWf3
+R2
+R3
+R9
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/sync_rom_16x4.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/sync_rom_16x4.v
+!i122 24
+L0 13 27
+R5
+r1
+!s85 0
+31
+!s108 1739236771.000000
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/sync_rom_16x4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/sync_rom_16x4.v|
+!i113 1
+R7
+R8
+vunidade_controle_desafio
+!s110 1739236772
+!i10b 1
+!s100 ej[8j;zoJXSI_L=>0WKVh0
+R1
+IPDm[=7gInI7[Bj[9If4EO3
+R2
+R3
+w1739194290
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/unidade_controle_desafio.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/unidade_controle_desafio.v
+!i122 25
+L0 1 132
+R5
+r1
+!s85 0
+31
+!s108 1739236772.000000
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/unidade_controle_desafio.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/exp06/Desafio/unidade_controle_desafio.v|
+!i113 1
+R7
+R8

@@ -1,6 +1,6 @@
 `timescale 1ns/1ns
 
-module jogo_tb1;
+module jogo_tb2;
 
     // Sinais para conectar com o DUT
     // valores iniciais para fins de simulacao (ModelSim)
@@ -14,14 +14,13 @@ module jogo_tb1;
     wire       errou_out  ;
     wire       pronto_out ;
     wire [3:0] leds_out   ;
-	wire       timeout_out;
+	  wire       timeout_out;
 
     wire       db_tem_jogada_out ;
     wire       db_jogadaIgualMemoria_out;
     wire       db_enderecoIgualSequencia_out;
     wire       db_fimS_out;
-    wire       db_ledsIgualSequencia_out;
-
+    
     wire [6:0] display_sequencia_out, 
                display_jogada_out, 
                display_memoria_out, 
@@ -52,7 +51,6 @@ module jogo_tb1;
         .db_enderecoIgualSequencia(db_enderecoIgualSequencia_out),
         .db_tem_jogada(db_tem_jogada_out),
         .db_fimS(db_fimS_out),
-        .db_ledsIgualSequencia(db_ledsIgualSequencia_out),
         .display_sequencia(display_sequencia_out),
         .display_jogada(display_jogada_out),
         .display_memoria(display_memoria_out),

@@ -14,7 +14,6 @@ output db_jogadaIgualMemoria,
 output db_enderecoIgualSequencia,
 output db_tem_jogada,
 output db_fimS,
-output db_ledsIgualSequencia,
 
 //display 7 segmentos
 output [6:0] display_sequencia,

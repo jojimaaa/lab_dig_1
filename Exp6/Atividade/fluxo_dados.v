@@ -53,7 +53,7 @@ module fluxo_dados (
 
 
     // contador_m timer dos leds ligados
-    contador_m #(.M(501), .N(9)) contadorLedsON (
+    contador_m #(.M(50), .N(9)) contadorLedsON (
         .clock(clock),
         .zera_as(zeraS),
         .zera_s(estado_ledsOff),
@@ -64,7 +64,7 @@ module fluxo_dados (
     );
 
     // contador_m timer dos leds desligados
-    contador_m #(.M(501), .N(9)) contadorLedsOFF (
+    contador_m #(.M(50), .N(9)) contadorLedsOFF (
         .clock(clock),
         .zera_as(zeraS),
         .zera_s(estado_ledsOn),
