@@ -6,17 +6,25 @@ module fluxo_dados (
  input zeraR,
  input zeraA,
  input registraA,
+ input contaA,
+ input contaPiscadas,
+ input contaLedsOn,
+ input contaLedsOff,
  input nivel,
  input registraR,
  input zeraL,
  input registraL,
  input [3:0] botoes,
- output [3:0] acertoAnterior,
- output [3:0] jogadaAtual,
  output acertouJogada,
+ output jogadaAtualEQUALSacertoAnterior,
+ output acertoAnteriorEQUALSzero,
  output tem_jogada,
  output fimS,
+ output fimLedsOff,
+ output fimLedsOn,
+ output fimPiscaLeds,
  output [3:0] leds, //novo output
+ output [1:0] acertos,
  output timeout,
 
 //display 7 seg
@@ -25,8 +33,15 @@ module fluxo_dados (
               HEX2, 
               HEX3, 
               HEX4,
-              HEX5
+              HEX5,
+
+// saida de depuracao
+  output[3:0]  db_jogada,
+  output[3:0]  db_sequencia
 );
+
+
+  wire[1:0] s_acertosBin;
 
   wire[3:0] s_sequencia, 
             s_memoriaLEDs,
@@ -43,7 +58,7 @@ module fluxo_dados (
 
 
     // contador_m timer do timeout
-   contador_m contadorm (
+   contador_m #(.M(300000), .N(32)) contadorTimeout (
        .clock(clock),
        .zera_as(zeraT),
        .zera_s(),
@@ -51,6 +66,38 @@ module fluxo_dados (
        .Q(),
        .fim(s_timeout),
        .meio()
+    );
+
+    // contador_m timer dos leds ligados
+    contador_m #(.M(500), .N(9)) contadorLedsON (
+        .clock(clock),
+        .zera_as(zeraA),
+        .zera_s(contaLedsOff),
+        .conta(contaLedsOn),
+        .Q(),
+        .fim(fimLedsOn),
+        .meio()
+    );
+
+    // contador_m timer dos leds desligados
+    contador_m #(.M(500), .N(9)) contadorLedsOFF (
+        .clock(clock),
+        .zera_as(zeraA),
+        .zera_s(contaLedsOn),
+        .conta(contaLedsOff),
+        .Q(),
+        .fim(fimLedsOff),
+        .meio()
+    );
+
+    contador_m #(.M(3), .N(2)) contadorPiscadas (
+        .clock(clock),
+        .zera_as(zeraA),
+        .zera_s(),
+        .conta(contaPiscadas),
+        .Q(),
+        .fim(fimPiscaLeds),
+        .meio()
     );
 
     // contador sequencia
@@ -66,6 +113,44 @@ module fluxo_dados (
       .meio()
     );
 
+    //contador acertos
+    contador_m #(.M(3), .N(2)) contadorAcertos (
+       .clock(clock),
+       .zera_as(zeraA),
+       .zera_s(),
+       .conta(contaA),
+       .Q(s_acertosBin),
+       .fim(),
+       .meio()
+    );
+
+    //decodificador acertos
+    decodificadorAcertos decodificadorAcertos(
+        .acertosBin(s_acertosBin),
+        .acertosLeds(acertos)
+    );
+
+    comparador_85 comparador_jogadaAtual_acertoAnterior (
+      .A(s_jogadaAtual),
+      .B(s_acertoAnterior),
+      .ALBi(1'b0),
+      .AGBi(1'b0),
+      .AEBi(1'b1),
+      .ALBo(),
+      .AGBo(),
+      .AEBo(jogadaAtualEQUALSacertoAnterior)
+    );
+
+    comparador_85 comparador_acertoAnterior_zero (
+      .A(4'b0000),
+      .B(s_acertoAnterior),
+      .ALBi(1'b0),
+      .AGBi(1'b0),
+      .AEBi(1'b1),
+      .ALBo(),
+      .AGBo(),
+      .AEBo(acertoAnteriorEQUALSzero)
+    );
 
 
     //memóriaLEDs
@@ -146,41 +231,37 @@ module fluxo_dados (
     assign s_tem_jogada = botoes[3] || botoes[2] || botoes[1] || botoes[0];
 
 
-/*     edge_detector detectorAcertouJogada (
-        .clock(clock),
-        .reset(),
-        .sinal(s_acertouJogada),
-        .pulso(acertouJogada)
-    ); */
+
+
 
 	 
     hexa7seg hex0_converter (
-        .hexa(w_endereco),
+        .hexa(),
         .display(HEX0)
     );
 
     hexa7seg hex1_converter (
-        .hexa(w_memoria),
+        .hexa(),
         .display(HEX1)
     );
 
     hexa7seg hex2_converter (
-        .hexa(w_jogada),
+        .hexa(),
         .display(HEX2)
     );
 
     hexa7seg hex3_converter (
-        .hexa(w_sequencia),
+        .hexa(),
         .display(HEX3)
     );
 
     hexa7seg hex4_converter (
-        .hexa(w_estado),
+        .hexa(),
         .display(HEX4)
     );
 
     hexa7seg hex5_converter (
-        .hexa(7'b0000001),
+        .hexa(),
         .display(HEX5)
     );
 

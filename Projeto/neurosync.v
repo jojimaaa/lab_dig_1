@@ -6,8 +6,13 @@ input nivel,
 input confirma,
 input [3:0] botoes,
 output [3:0] leds,
+output [1:0] acertos,
 output pronto,
 output timeout,
+
+//depuração
+output [3:0] db_estado,
+output db_acertouJogada,
 
 //display 7 segmentos
 output [6:0] HEX0,
@@ -20,6 +25,15 @@ output [6:0] HEX0,
 
 //ligação entre sinais
 wire w_fimS,
+     w_fimLedsOff,
+     w_fimLedsOn,
+     w_fimPiscaLeds,
+     w_contaA,
+     w_contaPiscadas,
+     w_contaLedsOn,
+     w_contaLedsOff,
+     w_jogadaAtualEQUALSacertoAnterior,
+     w_acertoAnteriorEQUALSzero,
      w_timeout,
      w_tem_jogada,
      w_acertouJogada,
@@ -35,8 +49,6 @@ wire w_fimS,
      w_zeraL,
      w_registraL;
 
-wire [3:0] w_jogadaAtual,
-          w_acertoAnterior;
 
 
 
@@ -52,6 +64,11 @@ unidade_controle UC (
  .jogadaAtual(w_jogadaAtual),
  .tem_jogada(w_tem_jogada),
  .acertouJogada(w_acertouJogada),
+ .jogadaAtualEQUALSacertoAnterior(),
+ .acertoAnteriorEQUALSzero(),
+ .fimPiscaLeds(w_fimPiscaLeds),
+ .fimLedsOn(w_fimLedsOn),
+ .fimLedsOff(w_fimLedsOff),
  .zeraT(w_zeraT),
  .zeraR(w_zeraR),
  .registraR(w_registraR),
@@ -65,8 +82,10 @@ unidade_controle UC (
  .registraL(w_registraL),
  .displayAddr(),
  .pronto(pronto),
- .db_estado(),
- .timeout_out(timeout)
+ .timeout_out(timeout),
+
+
+ .db_estado(db_estado)
 );
 
 //TODO atualizar conexões
@@ -78,17 +97,24 @@ fluxo_dados FD (
  .zeraR(w_zeraR),
  .zeraA(w_zeraA),
  .registraA(w_registraA),
+ .contaA(),
+ .contaPiscadas(),
+ .contaLedsOn(),
+ .contaLedsOff(),
  .nivel(nivel),
  .registraR(w_registraR),
  .zeraL(w_zeraL),
  .registraL(w_registraL),
  .botoes(botoes),
- .acertoAnterior(w_acertoAnterior),
- .jogadaAtual(w_jogadaAtual),
+ .jogadaAtualEQUALSacertoAnterior(),
+ .acertoAnteriorEQUALSzero(),
  .acertouJogada(w_acertouJogada),
  .tem_jogada(w_tem_jogada),
  .fimS(w_fimS),
+ .fimLedsOff(),
+ .fimLedsOn(),
  .leds(leds),
+ .acertos(acertos),
  .timeout(w_timeout),
 
 //display 7 seg
@@ -97,8 +123,13 @@ fluxo_dados FD (
  .HEX2(HEX2), 
  .HEX3(HEX3), 
  .HEX4(HEX4),
- .HEX5(HEX5)
+ .HEX5(HEX5),
+
+// saida de depuracao
+ .db_jogada(),
+ .db_sequencia()
 );
 
+assign db_acertouJogada = w_acertouJogada;
 
 endmodule
