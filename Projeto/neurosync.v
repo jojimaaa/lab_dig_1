@@ -1,10 +1,11 @@
-module neurosync (
+module neurosync (    
 input clock,
 input reset,
 input jogar,
 input nivel,
 input confirma,
 input [3:0] botoes,
+
 output [3:0] leds,
 output [1:0] acertos,
 output pronto,
@@ -13,6 +14,10 @@ output timeout,
 //depuração
 output [3:0] db_estado,
 output db_acertouJogada,
+output db_jogadaAtualEQUALSacertoAnterior,
+output db_acertoAnteriorEQUALSzero,
+output [3:0] db_jogada,
+output [3:0] db_sequencia,
 
 //display 7 segmentos
 output [6:0] HEX0,
@@ -32,6 +37,7 @@ wire w_fimS,
      w_contaPiscadas,
      w_contaLedsOn,
      w_contaLedsOff,
+     w_apagarAcertos,
      w_jogadaAtualEQUALSacertoAnterior,
      w_acertoAnteriorEQUALSzero,
      w_timeout,
@@ -60,12 +66,10 @@ unidade_controle UC (
  .confirma(confirma),
  .nivel(nivel),
  .timeout(w_timeout),
- .acertoAnterior(w_acertoAnterior),
- .jogadaAtual(w_jogadaAtual),
  .tem_jogada(w_tem_jogada),
  .acertouJogada(w_acertouJogada),
- .jogadaAtualEQUALSacertoAnterior(),
- .acertoAnteriorEQUALSzero(),
+ .jogadaAtualEQUALSacertoAnterior(w_jogadaAtualEQUALSacertoAnterior),
+ .acertoAnteriorEQUALSzero(w_acertoAnteriorEQUALSzero),
  .fimPiscaLeds(w_fimPiscaLeds),
  .fimLedsOn(w_fimLedsOn),
  .fimLedsOff(w_fimLedsOff),
@@ -76,15 +80,20 @@ unidade_controle UC (
  .contaS(w_contaS),
  .zeraA(w_zeraA),
  .registraA(w_registraA),
+ .contaA(w_contaA),
  .zeraN(w_zeraN),
  .registraN(w_registraN),
  .zeraL(w_zeraL),
  .registraL(w_registraL),
  .displayAddr(),
  .pronto(pronto),
+ .contaLedsOn(w_contaLedsOn),
+ .contaLedsOff(w_contaLedsOff),
+ .contaPiscadas(w_contaPiscadas),
  .timeout_out(timeout),
+ .apagarAcertos(w_apagarAcertos),
 
-
+    //depuração
  .db_estado(db_estado)
 );
 
@@ -97,22 +106,24 @@ fluxo_dados FD (
  .zeraR(w_zeraR),
  .zeraA(w_zeraA),
  .registraA(w_registraA),
- .contaA(),
- .contaPiscadas(),
- .contaLedsOn(),
- .contaLedsOff(),
+ .contaA(w_contaA),
+ .contaPiscadas(w_contaPiscadas),
+ .contaLedsOn(w_contaLedsOn),
+ .contaLedsOff(w_contaLedsOff),
  .nivel(nivel),
  .registraR(w_registraR),
  .zeraL(w_zeraL),
  .registraL(w_registraL),
  .botoes(botoes),
- .jogadaAtualEQUALSacertoAnterior(),
- .acertoAnteriorEQUALSzero(),
+ .apagarAcertos(w_apagarAcertos),
  .acertouJogada(w_acertouJogada),
+ .jogadaAtualEQUALSacertoAnterior(w_jogadaAtualEQUALSacertoAnterior),
+ .acertoAnteriorEQUALSzero(w_acertoAnteriorEQUALSzero),
  .tem_jogada(w_tem_jogada),
  .fimS(w_fimS),
- .fimLedsOff(),
- .fimLedsOn(),
+ .fimLedsOff(w_fimLedsOff),
+ .fimLedsOn(w_fimLedsOn),
+ .fimPiscaLeds(w_fimPiscaLeds),
  .leds(leds),
  .acertos(acertos),
  .timeout(w_timeout),
@@ -126,10 +137,13 @@ fluxo_dados FD (
  .HEX5(HEX5),
 
 // saida de depuracao
- .db_jogada(),
- .db_sequencia()
+ .db_jogada(db_jogada),
+ .db_sequencia(db_sequencia)
 );
 
 assign db_acertouJogada = w_acertouJogada;
+assign db_jogadaAtualEQUALSacertoAnterior = w_jogadaAtualEQUALSacertoAnterior;
+assign db_acertoAnteriorEQUALSzero = w_acertoAnteriorEQUALSzero;
+
 
 endmodule

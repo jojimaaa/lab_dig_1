@@ -25,14 +25,16 @@ module unidade_controle (
  output reg registraN,
  output reg zeraL,
  output reg registraL,
- output reg contaPiscaLeds,
  output reg [2:0] displayAddr,
  output reg pronto,
- output reg [3:0] db_estado,
  output reg contaLedsOn,
  output reg contaLedsOff,
  output reg contaPiscadas,
- output reg timeout_out
+ output reg timeout_out,
+ output reg apagarAcertos,
+
+    // saida de depuracao
+ output reg [3:0] db_estado
 );
 
 
@@ -103,7 +105,11 @@ module unidade_controle (
         registraN = (Eatual == preparacao) ? 1'b1 : 1'b0;
         zeraL = (Eatual == preparacao) ? 1'b1 : 1'b0;
         timeout_out = (Eatual == estado_timeout) ? 1'b1 : 1'b0;
-		  
+        contaLedsOn = (Eatual == pisca_acertos_on) ? 1'b1 : 1'b0;
+        contaLedsOff = (Eatual == pisca_acertos_off) ? 1'b1 : 1'b0;
+        contaPiscadas = (Eatual == pisca_acertos_off) ? 1'b1 : 1'b0;
+        apagarAcertos = (Eatual == pisca_acertos_off) ? 1'b1 : 1'b0;
+        
 		  
         // Saida de depuracao (estado)
         case (Eatual)
@@ -115,7 +121,8 @@ module unidade_controle (
             comparacao           : db_estado <= 4'b0101;  // 5
             proximo              : db_estado <= 4'b0110;  // 6
             acende_segundo_acerto: db_estado <= 4'b0111;  // 7
-            pisca_acertos        : db_estado <= 4'b1000;  // 8
+            pisca_acertos_on     : db_estado <= 4'b1000;  // 8
+            pisca_acertos_off    : db_estado <= 4'b1100;  // C
             is_ultima_sequencia  : db_estado <= 4'b1001;  // 9
             proxima_sequencia    : db_estado <= 4'b1011;  // B
             estado_timeout       : db_estado <= 4'b1110;  // E

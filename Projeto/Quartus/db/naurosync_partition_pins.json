@@ -1,0 +1,133 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "acertos[0]",
+					"strict" : false
+				},
+				{
+					"name" : "acertos[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pronto",
+					"strict" : false
+				},
+				{
+					"name" : "timeout",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[0]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[1]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[2]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[3]",
+					"strict" : false
+				},
+				{
+					"name" : "db_acertouJogada",
+					"strict" : false
+				},
+				{
+					"name" : "db_jogadaAtualEQUALSacertoAnterior",
+					"strict" : false
+				},
+				{
+					"name" : "db_acertoAnteriorEQUALSzero",
+					"strict" : false
+				},
+				{
+					"name" : "db_jogada[0]",
+					"strict" : false
+				},
+				{
+					"name" : "db_jogada[1]",
+					"strict" : false
+				},
+				{
+					"name" : "db_jogada[2]",
+					"strict" : false
+				},
+				{
+					"name" : "db_jogada[3]",
+					"strict" : false
+				},
+				{
+					"name" : "db_sequencia[0]",
+					"strict" : false
+				},
+				{
+					"name" : "db_sequencia[1]",
+					"strict" : false
+				},
+				{
+					"name" : "db_sequencia[2]",
+					"strict" : false
+				},
+				{
+					"name" : "db_sequencia[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "jogar",
+					"strict" : false
+				},
+				{
+					"name" : "confirma",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[3]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[0]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[1]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

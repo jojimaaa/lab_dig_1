@@ -15,6 +15,7 @@ module fluxo_dados (
  input zeraL,
  input registraL,
  input [3:0] botoes,
+ input apagarAcertos,
  output acertouJogada,
  output jogadaAtualEQUALSacertoAnterior,
  output acertoAnteriorEQUALSzero,
@@ -41,7 +42,8 @@ module fluxo_dados (
 );
 
 
-  wire[1:0] s_acertosBin;
+  wire[1:0] s_acertosBin,
+            s_acertosDecodificados;
 
   wire[3:0] s_sequencia, 
             s_memoriaLEDs,
@@ -54,6 +56,7 @@ module fluxo_dados (
 
   wire      s_tem_jogada, 
             s_timeout, // sinal interno para interligacao dos componentes
+            s_contaPiscadasPulso,
             s_nivel;  
 
 
@@ -94,7 +97,7 @@ module fluxo_dados (
         .clock(clock),
         .zera_as(zeraA),
         .zera_s(),
-        .conta(contaPiscadas),
+        .conta(s_contaPiscadasPulso),
         .Q(),
         .fim(fimPiscaLeds),
         .meio()
@@ -127,7 +130,7 @@ module fluxo_dados (
     //decodificador acertos
     decodificadorAcertos decodificadorAcertos(
         .acertosBin(s_acertosBin),
-        .acertosLeds(acertos)
+        .acertosLeds(s_acertosDecodificados)
     );
 
     comparador_85 comparador_jogadaAtual_acertoAnterior (
@@ -232,7 +235,12 @@ module fluxo_dados (
 
 
 
-
+    edge_detector detectorContaPiscadas (
+        .clock(clock),
+        .reset(),
+        .sinal(contaPiscadas),
+        .pulso(s_contaPiscadasPulso)
+    );
 
 	 
     hexa7seg hex0_converter (
@@ -267,14 +275,16 @@ module fluxo_dados (
 
 
 
+    //MUX acertos
+    assign acertos = apagarAcertos ? 2'b00 : s_acertosDecodificados; 
+
 
 
     // saida de depuracao
-    assign db_jogada = jogadaAtual;
+    assign db_jogada = s_jogadaAtual;
     assign db_sequencia = s_sequencia;
     //assign timeout = s_timeout;
     assign leds = s_regLeds;
     assign acertoAnterior = s_acertoAnterior;
-    assign jogadaAtual = s_jogadaAtual;
 
 endmodule

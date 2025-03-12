@@ -1,4 +1,4 @@
-`timescale 1ns/1ns
+`timescale 1us/1us
 
 module tb1;
 
@@ -13,10 +13,19 @@ module tb1;
 
     wire       pronto_out ;
     wire [3:0] leds_out   ;
-	wire       timeout_out;
+	  wire       timeout_out;
+    wire [1:0] acertos_out;
+
+    // Sinais de depuracao
+    wire [3:0] db_estado;
+    wire       db_acertouJogada;
+    wire       db_jogadaAtualEQUALSacertoAnterior;
+    wire       db_acertoAnteriorEQUALSzero;
+    wire [3:0] db_jogada;
+    wire [3:0] db_sequencia;
 
     // Configuração do clock
-    parameter clockPeriod = 1_000_000; // f=1KHz
+    parameter clockPeriod = 1_000; // f=1KHz
 
     // Identificacao do caso de teste
     reg [31:0] caso = 0;
@@ -26,15 +35,30 @@ module tb1;
 
     // instanciacao do DUT (Device Under Test)
     neurosync DUT (
+
+        // sinais de entrada
         .clock(clock_in),
         .reset(reset_in),
         .jogar(iniciar_in),
         .nivel(nivel_in),
         .confirma(confirma_in),
         .botoes(chaves_in),
+        .acertos(acertos_out),
+
+        // sinais de saida
         .leds(leds_out),
         .pronto(pronto_out),
         .timeout(timeout_out),
+
+        // sinais de depuracao
+        .db_estado(db_estado),
+        .db_acertouJogada(db_acertouJogada),
+        .db_jogadaAtualEQUALSacertoAnterior(db_jogadaAtualEQUALSacertoAnterior),
+        .db_acertoAnteriorEQUALSzero(db_acertoAnteriorEQUALSzero),
+        .db_jogada(db_jogada),
+        .db_sequencia(db_sequencia),
+
+        // sinais de display 7 segmentos
         .HEX0(),
         .HEX1(),
         .HEX2(),
@@ -79,7 +103,7 @@ module tb1;
       #(5*clockPeriod);
       iniciar_in = 0;
       // espera
-      #(500*clockPeriod);
+      #(5000*clockPeriod);
 
       // Teste 3. configurar nível
       caso = 3;
@@ -93,21 +117,21 @@ module tb1;
         chaves_in = 4'b0001;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 5. fazer a mesma jogada jogada
         caso = 5;
         chaves_in = 4'b0001;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 6. fazer a segunda jogada
         caso = 6;
         chaves_in = 4'b1000;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 7. fazer a segunda rodada
         caso = 7;
@@ -118,7 +142,7 @@ module tb1;
         chaves_in = 4'b0010;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 8. fazer a terceira rodada
         caso = 8;
@@ -129,7 +153,7 @@ module tb1;
         chaves_in = 4'b0001;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 9. fazer a quarta rodada
         caso = 9;
@@ -140,7 +164,7 @@ module tb1;
         chaves_in = 4'b1000;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 10. fazer a quinta rodada
         caso = 10;
@@ -151,7 +175,7 @@ module tb1;
         chaves_in = 4'b0100;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 11. fazer a sexta rodada
         caso = 11;
@@ -162,7 +186,7 @@ module tb1;
         chaves_in = 4'b0010;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 12. fazer a sétima rodada
         caso = 12;
@@ -173,7 +197,7 @@ module tb1;
         chaves_in = 4'b0001;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
 
         // Teste 13. fazer a oitava rodada
@@ -185,7 +209,7 @@ module tb1;
         chaves_in = 4'b1000;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 14. fazer a nona rodada
         caso = 14;
@@ -196,7 +220,7 @@ module tb1;
         chaves_in = 4'b0010;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 15. fazer a décima rodada
         caso = 15;
@@ -207,7 +231,7 @@ module tb1;
         chaves_in = 4'b0100;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 16. fazer a décima primeira rodada
         caso = 16;
@@ -218,7 +242,7 @@ module tb1;
         chaves_in = 4'b0100;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 17. fazer a décima segunda rodada
         caso = 17;
@@ -229,7 +253,7 @@ module tb1;
         chaves_in = 4'b0001;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 18. fazer a décima terceira rodada
         caso = 18;
@@ -240,7 +264,7 @@ module tb1;
         chaves_in = 4'b0100;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 19. fazer a décima quarta rodada
         caso = 19;
@@ -251,7 +275,7 @@ module tb1;
         chaves_in = 4'b1000;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 20. fazer a décima quinta rodada
         caso = 20;
@@ -262,7 +286,7 @@ module tb1;
         chaves_in = 4'b0001;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 21. fazer a décima sexta rodada
         caso = 21;
@@ -273,7 +297,7 @@ module tb1;
         chaves_in = 4'b0100;
         #(10*clockPeriod);
         chaves_in = 4'b0000;
-        #(500*clockPeriod);
+        #(5000*clockPeriod);
 
         // Teste 22. timeout
         caso = 22;
