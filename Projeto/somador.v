@@ -1,3 +1,4 @@
+//Autor: Enzo Koichi Jojima - 14568285
 module somador #(parameter N = 4) (
     input [N-1:0] a,
     input [N-1:0] b,

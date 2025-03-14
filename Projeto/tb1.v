@@ -1,3 +1,5 @@
+// Autor: Enzo Koichi Jojima - 14568285
+// Adaptado do modelo de testbench do Prof. Dr. Edson Midorikawa
 `timescale 1us/1us
 
 module tb1;

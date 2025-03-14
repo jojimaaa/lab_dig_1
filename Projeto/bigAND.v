@@ -1,3 +1,4 @@
+//Autor Enzo Koichi Jojima - 14568285
 module bigAND(
     input [3:0] A,
     input [3:0] B,

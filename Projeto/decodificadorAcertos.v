@@ -1,3 +1,4 @@
+//Autor: Enzo Koichi Jojima - 14568285
 module decodificadorAcertos (
     input [1:0] acertosBin,
     output reg [1:0] acertosLeds

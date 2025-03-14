@@ -1,3 +1,4 @@
+// Autor: Enzo Koichi Jojima - 14568285
 module displayMem (
     input clock,
     input [1:0] displayAddr,

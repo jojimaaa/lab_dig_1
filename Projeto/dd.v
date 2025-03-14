@@ -1,3 +1,5 @@
+//Solução do EP1 de PCS3225 - Sistemas Digitais 2 (2024) - Prof. Dr. Bruno de Carvalho Albertini
+//Autor: Enzo Koichi Jojima - 14568285
 module double_dabble (
     clk, 
     rst, 

@@ -1,3 +1,5 @@
+// Autor Enzo Koichi Jojima - 14568285
+// Adaptado do módulo sync_rom_16x4.v do Prof. Dr. Edson Midorikawa
 module memoriaFacil (clock, address, data_out);
     input            clock;
     input      [3:0] address;

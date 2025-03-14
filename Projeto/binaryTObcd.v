@@ -7,7 +7,7 @@ module binaryTObcd (
     output reg [3:0] unidades
 );
     // esse módulo irá implementar o algorítmo de conversão de binário para BCD chamado de DOUBLE DABBLE
-    //Autor: Enzo Koichi Jojima
+    //Autor: Enzo Koichi Jojima - 14568285
     //Baseado no EP1 de PCS3225 - Sistemas Digitais 2 (2024) - Prof. Dr. Bruno de Carvalho Albertini
 
     integer i;

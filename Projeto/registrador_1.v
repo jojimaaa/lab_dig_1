@@ -1,3 +1,5 @@
+// Autor: Enzo Koichi Jojima - 14568285
+// Adaptado do módulo registrador_4.v do Prof. Dr. Edson Midorikawa
 module registrador_1 (
     input        clock,
     input        clear,

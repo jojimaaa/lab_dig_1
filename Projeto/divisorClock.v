@@ -1,3 +1,5 @@
+//Autores: Enzo Koichi Jojima - 14568285
+//         Eduardo Ribeiro do Amparo Rodrigues de Souza - 14567346
 module divisorClock (
     input clock,
     input rst,
