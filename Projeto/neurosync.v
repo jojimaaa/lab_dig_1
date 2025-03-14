@@ -53,8 +53,11 @@ wire w_fimS,
      w_zeraN,
      w_registraN,
      w_zeraL,
+     w_contaT,
+     w_displayFromMem,
      w_registraL;
 
+wire [1:0] w_displayAddr;
 
 
 
@@ -74,6 +77,7 @@ unidade_controle UC (
  .fimLedsOn(w_fimLedsOn),
  .fimLedsOff(w_fimLedsOff),
  .zeraT(w_zeraT),
+ .contaT(w_contaT),
  .zeraR(w_zeraR),
  .registraR(w_registraR),
  .zeraS(w_zeraS),
@@ -85,7 +89,8 @@ unidade_controle UC (
  .registraN(w_registraN),
  .zeraL(w_zeraL),
  .registraL(w_registraL),
- .displayAddr(),
+ .displayAddr(w_displayAddr),
+ .displayFromMem(w_displayFromMem),
  .pronto(pronto),
  .contaLedsOn(w_contaLedsOn),
  .contaLedsOff(w_contaLedsOff),
@@ -101,6 +106,7 @@ unidade_controle UC (
 fluxo_dados FD (
  .clock(clock),
  .zeraT(w_zeraT),
+ .contaT(w_contaT),
  .zeraS(w_zeraS),
  .contaS(w_contaS),
  .zeraR(w_zeraR),
@@ -114,7 +120,9 @@ fluxo_dados FD (
  .registraR(w_registraR),
  .zeraL(w_zeraL),
  .registraL(w_registraL),
+ .displayFromMem(w_displayFromMem),
  .botoes(botoes),
+ .displayAddr(w_displayAddr),
  .apagarAcertos(w_apagarAcertos),
  .acertouJogada(w_acertouJogada),
  .jogadaAtualEQUALSacertoAnterior(w_jogadaAtualEQUALSacertoAnterior),

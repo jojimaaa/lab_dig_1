@@ -1,14 +1,18 @@
-module somador (
-    input [3:0] a,
-    input [3:0] b,
+module somador #(parameter N = 4) (
+    input [N-1:0] a,
+    input [N-1:0] b,
     input clk,
+    input sum,
     input enable,
-    output reg [4:0] sum
+    output reg [N-1:0] result
 );
 
 always @(posedge clk) begin
     if (enable) begin
-        sum <= a + b;
+        if (sum)
+            result <= a + b;
+        else
+            result <= a - b;
     end
 end
 

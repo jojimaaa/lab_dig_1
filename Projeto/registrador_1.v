@@ -6,7 +6,7 @@ module registrador_1 (
     output  Q
 );
 
-    reg [3:0] IQ;
+    reg IQ;
 
     always @(posedge clock or posedge clear) begin
         if (clear)

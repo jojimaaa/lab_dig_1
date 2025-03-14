@@ -1,5 +1,6 @@
 module fluxo_dados (
  input clock,
+ input contaT,
  input zeraT,
  input zeraS,
  input contaS,
@@ -14,7 +15,9 @@ module fluxo_dados (
  input registraR,
  input zeraL,
  input registraL,
+ input displayFromMem,
  input [3:0] botoes,
+ input [1:0] displayAddr,
  input apagarAcertos,
  output acertouJogada,
  output jogadaAtualEQUALSacertoAnterior,
@@ -51,24 +54,77 @@ module fluxo_dados (
             s_jogadaAtual,  // sinal interno para interligacao dos componentes
             s_acertoAnterior,
             s_acertouJogada,
+            s_centenas,
+            s_dezenas,
+            s_unidades,
             s_regLeds; // indica o que o registrador de Leds está guardando
 	
+  wire [6:0] memHEX0, 
+             memHEX1, 
+             memHEX2, 
+             memHEX3, 
+             memHEX4, 
+             memHEX5,
+             timerHEX5,
+             timerHEX4,
+             timerHEX3;
+
+  wire [8:0] s_timerOutput,
+             s_timerDisplay;
 
   wire      s_tem_jogada, 
             s_timeout, // sinal interno para interligacao dos componentes
             s_contaPiscadasPulso,
+            s_clockDiv,
             s_nivel;  
 
 
+    divisorClock divisorClock (
+        .clock(clock),
+        .rst(zeraT),
+        .clockDiv(s_clockDiv)
+    );
+
     // contador_m timer do timeout
-   contador_m #(.M(300000), .N(32)) contadorTimeout (
-       .clock(clock),
+   contador_m #(.M(300), .N(9)) contadorTimeout (
+       .clock(s_clockDiv),
        .zera_as(zeraT),
        .zera_s(),
-       .conta(1'b1),
-       .Q(),
+       .conta(contaT),
+       .Q(s_timerOutput),
        .fim(s_timeout),
        .meio()
+    );
+
+    somador #(.N(9)) subtratorTimer7Seg (
+        .a(9'd300),
+        .b(s_timerOutput),
+        .clk(clock),
+        .sum(1'b0),
+        .enable(contaT),
+        .result(s_timerDisplay)
+    );
+
+    binaryTObcd binaryTObcd (
+        .bin(s_timerDisplay),
+        .clock(clock),
+        .rst(zeraT),
+        .centenas(s_centenas),
+        .dezenas(s_dezenas),
+        .unidades(s_unidades)
+    );
+
+    displayMem displayMem (
+        .clock(clock),
+        .displayAddr(displayAddr),
+        .nivel(nivel),
+
+        .HEX0(memHEX0),
+        .HEX1(memHEX1),
+        .HEX2(memHEX2),
+        .HEX3(memHEX3),
+        .HEX4(memHEX4),
+        .HEX5(memHEX5)
     );
 
     // contador_m timer dos leds ligados
@@ -243,34 +299,20 @@ module fluxo_dados (
     );
 
 	 
-    hexa7seg hex0_converter (
-        .hexa(),
-        .display(HEX0)
-    );
-
-    hexa7seg hex1_converter (
-        .hexa(),
-        .display(HEX1)
-    );
-
-    hexa7seg hex2_converter (
-        .hexa(),
-        .display(HEX2)
-    );
 
     hexa7seg hex3_converter (
-        .hexa(),
-        .display(HEX3)
+        .hexa(s_unidades),
+        .display(timerHEX3)
     );
 
     hexa7seg hex4_converter (
-        .hexa(),
-        .display(HEX4)
+        .hexa(s_dezenas),
+        .display(timerHEX4)
     );
 
     hexa7seg hex5_converter (
-        .hexa(),
-        .display(HEX5)
+        .hexa(s_centenas),
+        .display(timerHEX5)
     );
 
 
@@ -278,6 +320,14 @@ module fluxo_dados (
     //MUX acertos
     assign acertos = apagarAcertos ? 2'b00 : s_acertosDecodificados; 
 
+
+    //MUX display
+    assign HEX0 = memHEX0;
+    assign HEX1 = memHEX1;
+    assign HEX2 = memHEX2;
+    assign HEX3 = displayFromMem ? memHEX3 : contaT ? timerHEX3 : 7'b1111111;
+    assign HEX4 = displayFromMem ? memHEX4 : contaT ? timerHEX4 : 7'b1111111;
+    assign HEX5 = displayFromMem ? memHEX5 : contaT ? timerHEX5 : 7'b1111111;
 
 
     // saida de depuracao

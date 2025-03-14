@@ -14,6 +14,7 @@ module unidade_controle (
  input fimLedsOn,
  input fimLedsOff,
  output reg zeraT,
+ output reg contaT,
  output reg zeraR,
  output reg registraR,
  output reg zeraS,
@@ -25,7 +26,8 @@ module unidade_controle (
  output reg registraN,
  output reg zeraL,
  output reg registraL,
- output reg [2:0] displayAddr,
+ output reg [1:0] displayAddr,
+ output reg displayFromMem,
  output reg pronto,
  output reg contaLedsOn,
  output reg contaLedsOff,
@@ -95,12 +97,13 @@ module unidade_controle (
         zeraS = (Eatual == preparacao) ? 1'b1 : 1'b0;
         contaS = (Eatual == proxima_sequencia) ? 1'b1 : 1'b0;
         zeraA = (Eatual == preparacao || Eatual == inicia_sequencia || Eatual == proxima_sequencia) ? 1'b1 : 1'b0;
-        displayAddr = (Eatual == preparacao) ? 3'b000 : (Eatual == espera_jogada) ? 3'b001 : (Eatual == final_com_acerto) ? 3'b010 : (Eatual == estado_timeout) ? 3'b011 : 3'b111;
+        displayAddr = (Eatual == preparacao) ? 2'b00 : (Eatual == final_com_acerto) ? 2'b01 : (Eatual == estado_timeout) ? 2'b10 : 2'b11;
         pronto = (Eatual == final_com_acerto || Eatual == estado_timeout) ? 1'b1 : 1'b0;
         registraA = (Eatual == proximo) ? 1'b1 : 1'b0;
         contaA = (Eatual == proximo || Eatual == acende_segundo_acerto) ? 1'b1 : 1'b0;
         registraL = (Eatual == inicia_sequencia) ? 1'b1 : 1'b0;
         zeraT = (Eatual == preparacao) ? 1'b1 : 1'b0;
+        contaT = (Eatual == inicia_sequencia || Eatual == espera_jogada || Eatual == registra || Eatual ==comparacao || Eatual == proximo || Eatual == acende_segundo_acerto || Eatual == pisca_acertos_on || Eatual == pisca_acertos_off || Eatual == is_ultima_sequencia || Eatual == proxima_sequencia) ? 1'b1 : 1'b0;
         zeraN = (Eatual == inicial) ? 1'b1 : 1'b0;
         registraN = (Eatual == preparacao) ? 1'b1 : 1'b0;
         zeraL = (Eatual == preparacao) ? 1'b1 : 1'b0;
@@ -109,6 +112,7 @@ module unidade_controle (
         contaLedsOff = (Eatual == pisca_acertos_off) ? 1'b1 : 1'b0;
         contaPiscadas = (Eatual == pisca_acertos_off) ? 1'b1 : 1'b0;
         apagarAcertos = (Eatual == pisca_acertos_off) ? 1'b1 : 1'b0;
+        displayFromMem = (Eatual == preparacao || Eatual == final_com_acerto || Eatual == estado_timeout) ? 1'b1 : 1'b0;
         
 		  
         // Saida de depuracao (estado)
