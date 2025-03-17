@@ -334,7 +334,8 @@ module fluxo_dados (
     assign db_jogada = s_jogadaAtual;
     assign db_sequencia = s_sequencia;
     //assign timeout = s_timeout;
-    assign leds = s_regLeds;
+    //assign leds = s_regLeds;
+	 assign leds = s_memoriaLEDs;
     assign acertoAnterior = s_acertoAnterior;
 
 endmodule

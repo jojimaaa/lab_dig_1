@@ -18,16 +18,16 @@ module displayMem (
                 HEX0 <= 7'b1111001; //1
                 HEX1 <= 7'b1000111; //l
                 HEX2 <= 7'b0000110; //e
-                HEX3 <= 7'b1100011; //v
+                HEX3 <= 7'b1000001; //v
                 HEX4 <= 7'b1111001; //i
-                HEX5 <= 7'b0101011; //n    
+                HEX5 <= 7'b1001000; //n    
                 end else begin
                 HEX0 <= 7'b1000000; //0
                 HEX1 <= 7'b1000111; //l
                 HEX2 <= 7'b0000110; //e
-                HEX3 <= 7'b1100011; //v
+                HEX3 <= 7'b1000001; //v
                 HEX4 <= 7'b1111001; //i
-                HEX5 <= 7'b0101011; //n
+                HEX5 <= 7'b1001000; //n  
                 end
             end 
 
@@ -35,9 +35,9 @@ module displayMem (
                 HEX0 <= 7'b1000001; //u
                 HEX1 <= 7'b0000110; //e
                 HEX2 <= 7'b1000110; //c
-                HEX3 <= 7'b0101011; //n
+                HEX3 <= 7'b1001000; //n
                 HEX4 <= 7'b0000110; //e
-                HEX5 <= 7'b1100011; //v
+                HEX5 <= 7'b1000001; //v
             end
 
             2'b10: begin            //perdeu

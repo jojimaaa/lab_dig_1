@@ -12,12 +12,12 @@ output pronto,
 output timeout,
 
 //depuração
-output [3:0] db_estado,
-output db_acertouJogada,
-output db_jogadaAtualEQUALSacertoAnterior,
-output db_acertoAnteriorEQUALSzero,
-output [3:0] db_jogada,
-output [3:0] db_sequencia,
+//output [3:0] db_estado,
+//output db_acertouJogada,
+//output db_jogadaAtualEQUALSacertoAnterior,
+//output db_acertoAnteriorEQUALSzero,
+//output [3:0] db_jogada,
+//output [3:0] db_sequencia,
 
 //display 7 segmentos
 output [6:0] HEX0,
@@ -96,10 +96,10 @@ unidade_controle UC (
  .contaLedsOff(w_contaLedsOff),
  .contaPiscadas(w_contaPiscadas),
  .timeout_out(timeout),
- .apagarAcertos(w_apagarAcertos),
+ .apagarAcertos(w_apagarAcertos)
 
     //depuração
- .db_estado(db_estado)
+ //.db_estado(db_estado)
 );
 
 //TODO atualizar conexões
@@ -142,16 +142,16 @@ fluxo_dados FD (
  .HEX2(HEX2), 
  .HEX3(HEX3), 
  .HEX4(HEX4),
- .HEX5(HEX5),
+ .HEX5(HEX5)
 
 // saida de depuracao
- .db_jogada(db_jogada),
- .db_sequencia(db_sequencia)
+// .db_jogada(db_jogada),
+// .db_sequencia(db_sequencia)
 );
 
-assign db_acertouJogada = w_acertouJogada;
-assign db_jogadaAtualEQUALSacertoAnterior = w_jogadaAtualEQUALSacertoAnterior;
-assign db_acertoAnteriorEQUALSzero = w_acertoAnteriorEQUALSzero;
+//assign db_acertouJogada = w_acertouJogada;
+//assign db_jogadaAtualEQUALSacertoAnterior = w_jogadaAtualEQUALSacertoAnterior;
+//assign db_acertoAnteriorEQUALSzero = w_acertoAnteriorEQUALSzero;
 
 
 endmodule

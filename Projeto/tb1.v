@@ -53,12 +53,12 @@ module tb1;
         .timeout(timeout_out),
 
         // sinais de depuracao
-        .db_estado(db_estado),
-        .db_acertouJogada(db_acertouJogada),
-        .db_jogadaAtualEQUALSacertoAnterior(db_jogadaAtualEQUALSacertoAnterior),
-        .db_acertoAnteriorEQUALSzero(db_acertoAnteriorEQUALSzero),
-        .db_jogada(db_jogada),
-        .db_sequencia(db_sequencia),
+        //.db_estado(db_estado),
+        //.db_acertouJogada(db_acertouJogada),
+        //.db_jogadaAtualEQUALSacertoAnterior(db_jogadaAtualEQUALSacertoAnterior),
+       // .db_acertoAnteriorEQUALSzero(db_acertoAnteriorEQUALSzero),
+       // .db_jogada(db_jogada),
+        //.db_sequencia(db_sequencia),
 
         // sinais de display 7 segmentos
         .HEX0(),
