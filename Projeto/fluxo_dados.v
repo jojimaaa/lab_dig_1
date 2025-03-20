@@ -11,7 +11,8 @@ module fluxo_dados (
  input contaPiscadas,
  input contaLedsOn,
  input contaLedsOff,
- input nivel,
+ input mais,
+ input menos,
  input registraR,
  input zeraL,
  input registraL,
@@ -19,6 +20,8 @@ module fluxo_dados (
  input [3:0] botoes,
  input [1:0] displayAddr,
  input apagarAcertos,
+ input contaM,
+ input zeraM,
  output acertouJogada,
  output jogadaAtualEQUALSacertoAnterior,
  output acertoAnteriorEQUALSzero,
@@ -48,8 +51,16 @@ module fluxo_dados (
   wire[1:0] s_acertosBin,
             s_acertosDecodificados;
 
-  wire[3:0] s_sequencia, 
+  wire[3:0] s_sequencia,
+            s_memoriaLEDs0,
+            s_memoriaLEDs1,
+            s_memoriaLEDs2,
+            s_memoriaLEDs3,
             s_memoriaLEDs,
+            s_memoria0,
+            s_memoria1,
+            s_memoria2,
+            s_memoria3,
             s_expected,
             s_jogadaAtual,  // sinal interno para interligacao dos componentes
             s_acertoAnterior,
@@ -75,9 +86,35 @@ module fluxo_dados (
   wire      s_tem_jogada, 
             s_timeout, // sinal interno para interligacao dos componentes
             s_contaPiscadasPulso,
-            s_clockDiv,
-            s_nivel;  
+            s_maisPulso,
+            s_menosPulso,
+            s_clockDiv;
 
+  wire [1:0] s_modo;  
+
+
+    edge_detector detectorMais (
+        .clock(clock),
+        .reset(),
+        .sinal(mais),
+        .pulso(s_maisPulso)
+    );
+
+    edge_detector detectorMenos (
+        .clock(clock),
+        .reset(),
+        .sinal(menos),
+        .pulso(s_menosPulso)
+    );    
+
+    contadorMaisMenos contadorModo(
+        .clock(clock),
+        .reset(zeraM),
+        .enable(contaM),
+        .mais(s_maisPulso),
+        .menos(s_menosPulso),
+        .Q(s_modo)
+    );
 
     divisorClock divisorClock (
         .clock(clock),
@@ -117,7 +154,7 @@ module fluxo_dados (
     displayMem displayMem (
         .clock(clock),
         .displayAddr(displayAddr),
-        .nivel(nivel),
+        .modo(s_modo),
 
         .HEX0(memHEX0),
         .HEX1(memHEX1),
@@ -168,8 +205,8 @@ module fluxo_dados (
       .enp(contaS),
       .D(4'b0000),
       .Q(s_sequencia),
-      .rco(fimS),
-      .meio()
+      .rco(),
+      .meio(fimS)
     );
 
     //contador acertos
@@ -213,17 +250,71 @@ module fluxo_dados (
 
 
     //memóriaLEDs
-    memoriaLEDs0 memoria_0 (
+    memoriaLEDs0 memoriaLEDs0 (
         .clock(clock),
         .address(s_sequencia),
-        .data_out(s_memoriaLEDs)
+        .data_out(s_memoriaLEDs0)
+    );
+
+    memoriaLEDs1 memoriaLEDs1 (
+        .clock(clock),
+        .address(s_sequencia),
+        .data_out(s_memoriaLEDs1)
+    );
+
+    memoriaLEDs2 memoriaLEDs2 (
+        .clock(clock),
+        .address(s_sequencia),
+        .data_out(s_memoriaLEDs2)
+    );
+
+    memoriaLEDs3 memoriaLEDs3 (
+        .clock(clock),
+        .address(s_sequencia),
+        .data_out(s_memoriaLEDs3)
     );
 
     //memóriaJogadas
-    memoriaFacil memoria_1 (
+    memoria0 memoria0 (
       .clock(clock),
       .address(s_memoriaLEDs),
-      .data_out(s_expected)
+      .data_out(s_memoria0)
+    );
+
+    memoria1 memoria1 (
+      .clock(clock),
+      .address(s_memoriaLEDs),
+      .data_out(s_memoria1)
+    );
+
+    memoria2 memoria2 (
+      .clock(clock),
+      .address(s_memoriaLEDs),
+      .data_out(s_memoria2)
+    );
+
+    memoria3 memoria3 (
+      .clock(clock),
+      .address(s_memoriaLEDs),
+      .data_out(s_memoria3)
+    );
+
+    mux_4x1 muxLEDS (
+        .in0(s_memoriaLEDs0),
+        .in1(s_memoriaLEDs1),
+        .in2(s_memoriaLEDs2),
+        .in3(s_memoriaLEDs3),
+        .sel(s_modo),
+        .out(s_memoriaLEDs)
+    );
+
+    mux_4x1 muxMemorias (
+        .in0(s_memoria0),
+        .in1(s_memoria1),
+        .in2(s_memoria2),
+        .in3(s_memoria3),
+        .sel(s_modo),
+        .out(s_expected)
     );
 
 
@@ -269,15 +360,6 @@ module fluxo_dados (
         .Q(timeout)
     );
 
-
-    //registrador para o nível
-    registrador_1 registradorNivel (
-        .clock(clock),
-        .clear(zeraN),
-        .enable(registraN),
-        .D(nivel),
-        .Q(s_nivel)
-    );
 
 
     // edge_detector

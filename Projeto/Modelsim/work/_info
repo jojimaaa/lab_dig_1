@@ -10,23 +10,23 @@ z2
 cModel Technology
 dD:/IntelQuarus_20.1.1.720
 vbigAND
-Z0 !s110 1741956350
+Z0 !s110 1742509847
 !i10b 1
-!s100 m`cA8A;MHGY_AXI[Xl`Sg1
+!s100 YF:8E2AVa]PUA3V>;REKJ1
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I2f`8d4JC_WzAiG=VX3`gg0
+I6<ELZ]g:dWX_8O>^9ezWA1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 dC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/Modelsim
-w1741546850
+w1741959469
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/bigAND.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/bigAND.v
-!i122 322
-L0 1 9
+!i122 366
+L0 2 9
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1741956350.000000
+Z5 !s108 1742509847.000000
 !s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/bigAND.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/bigAND.v|
 !i113 1
@@ -34,23 +34,23 @@ Z6 o-work work
 Z7 tCvgOpt 0
 nbig@a@n@d
 vbinaryTObcd
-Z8 !s110 1741956353
+Z8 !s110 1742509849
 !i10b 1
 !s100 ULXYYL`K0Y?cV^Ko9ZEz^2
 R1
 IR7OfFNOJDXN?QMX]Tl1JO3
 R2
 R3
-w1741956305
+w1741959264
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/binaryTObcd.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/binaryTObcd.v
-!i122 339
+!i122 382
 L0 1 49
 R4
 r1
 !s85 0
 31
-Z9 !s108 1741956353.000000
+Z9 !s108 1742509849.000000
 !s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/binaryTObcd.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/binaryTObcd.v|
 !i113 1
@@ -68,7 +68,7 @@ R3
 Z10 w1739120492
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/comparador_85.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/comparador_85.v
-!i122 323
+!i122 367
 L0 16 14
 R4
 r1
@@ -81,30 +81,30 @@ R5
 R6
 R7
 vcontador_163
-Z11 !s110 1741956351
+R0
 !i10b 1
-!s100 W_=CLAB[fm@QEF?Lb8hYn1
+!s100 4W?[=ACEJil9bhj?E6I[c1
 R1
-I93=W9bTW5_F_CfJJ3^oSS2
+Ijf7WQgPFlDHN]RU[FOXBH1
 R2
 R3
-w1739120493
+w1742501001
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contador_163.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contador_163.v
-!i122 324
-L0 16 21
+!i122 368
+L0 15 21
 R4
 r1
 !s85 0
 31
-Z12 !s108 1741956351.000000
+R5
 !s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contador_163.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contador_163.v|
 !i113 1
 R6
 R7
 vcontador_m
-R11
+R0
 !i10b 1
 !s100 KF1hX0?gEg<66kn2l2gQF0
 R1
@@ -114,18 +114,42 @@ R3
 w1741549507
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contador_m.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contador_m.v
-!i122 325
+!i122 369
 L0 20 37
 R4
 r1
 !s85 0
 31
-R12
+R5
 !s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contador_m.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contador_m.v|
 !i113 1
 R6
 R7
+vcontadorMaisMenos
+Z11 !s110 1742509850
+!i10b 1
+!s100 ?FL;3Zb<298gb75`5^e@D2
+R1
+Ij1hKICo@Vo^UcKJBTG=6W1
+R2
+R3
+w1742504630
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contadorMaisMenos.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contadorMaisMenos.v
+!i122 385
+L0 1 19
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contadorMaisMenos.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contadorMaisMenos.v|
+!i113 1
+R6
+R7
+ncontador@mais@menos
 vdecodificadorAcertos
 R8
 !i10b 1
@@ -137,8 +161,8 @@ R3
 w1741613616
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/Modelsim/decodificadorAcertos.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/Modelsim/decodificadorAcertos.v
-!i122 338
-Z13 L0 1 16
+!i122 381
+Z12 L0 1 16
 R4
 r1
 !s85 0
@@ -153,16 +177,16 @@ ndecodificador@acertos
 vdisplayMem
 R8
 !i10b 1
-!s100 _S14`oTf9d^]h`;njE6Ce0
+!s100 ^dWCZT40f5960TG?HBGB71
 R1
-I9Z_VEL<ddKFaVITfEDDmG0
+I^X3WP<T9Dg<c^lie5WiVm0
 R2
 R3
-w1741895730
+w1742505923
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/displayMem.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/displayMem.v
-!i122 340
-L0 1 63
+!i122 383
+L0 2 81
 R4
 r1
 !s85 0
@@ -177,16 +201,16 @@ ndisplay@mem
 vdivisorClock
 R8
 !i10b 1
-!s100 `gPR`M7l=f`<WP78G7zmQ0
+!s100 3Rf:=5DQ?o3D5NDECdlzP0
 R1
-I?5hL`iCd_ZG3aZIQV?FZa3
+I4Xh6Hm7a:^^_iD`3<e]ZT2
 R2
 R3
-w1741955983
+w1741959446
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/divisorClock.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/divisorClock.v
-!i122 341
-L0 1 23
+!i122 384
+L0 3 23
 R4
 r1
 !s85 0
@@ -199,7 +223,7 @@ R6
 R7
 ndivisor@clock
 vedge_detector
-R11
+R0
 !i10b 1
 !s100 b=6PQ:nFojW4z?d;AGW=D0
 R1
@@ -209,66 +233,66 @@ R3
 R10
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/edge_detector.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/edge_detector.v
-!i122 326
+!i122 370
 L0 21 23
 R4
 r1
 !s85 0
 31
-R12
+R5
 !s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/edge_detector.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/edge_detector.v|
 !i113 1
 R6
 R7
 vfluxo_dados
-R11
+Z13 !s110 1742509848
 !i10b 1
-!s100 Ti_jVQ@4J^hFER4DjM=Mk3
+!s100 kP?WMcQ]bHal8RfTPCoYB2
 R1
-I>71`^a1gST_I2GJ2MYNPa3
+IVN73dogMfk1n=5R0JXJ7[1
 R2
 R3
-w1741904318
+w1742506553
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v
-!i122 327
-L0 1 340
+!i122 371
+L0 1 423
 R4
 r1
 !s85 0
 31
-R12
+Z14 !s108 1742509848.000000
 !s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v|
 !i113 1
 R6
 R7
 vfull_edge_detector
-R11
+R13
 !i10b 1
-!s100 ;D=2n8k5_^4I8`2RlfDWj2
+!s100 DAXR;6XAMj7M4F7HChkS=3
 R1
-INFgE_ag4a6VR2LUAd]<7W0
+IAQRJLF_^?jKf]@:e9iomD3
 R2
 R3
-w1739567987
+w1741959320
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/full_edge_detector.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/full_edge_detector.v
-!i122 328
-L0 21 25
+!i122 372
+L0 4 25
 R4
 r1
 !s85 0
 31
-R12
+R14
 !s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/full_edge_detector.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/full_edge_detector.v|
 !i113 1
 R6
 R7
 vhexa7seg
-Z14 !s110 1741956352
+R13
 !i10b 1
 !s100 ^ldcN:Zl`^?4Tnh8I@Z332
 R1
@@ -278,20 +302,112 @@ R3
 w1741895378
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/hexa7seg.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/hexa7seg.v
-!i122 329
+!i122 373
 L0 23 38
 R4
 r1
 !s85 0
 31
-R12
+R14
 !s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/hexa7seg.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/hexa7seg.v|
 !i113 1
 R6
 R7
+vmemoria0
+R11
+!i10b 1
+!s100 mGKTc9F;jNQU@UUz_VdOo3
+R1
+I9E;?iDICNj]?On_EH=4Zl1
+R2
+R3
+w1742501103
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria0.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria0.v
+!i122 386
+L0 3 16
+R4
+r1
+!s85 0
+31
+Z15 !s108 1742509850.000000
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria0.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria0.v|
+!i113 1
+R6
+R7
+vmemoria1
+R11
+!i10b 1
+!s100 j3Wkoe[IJ^dOQa:Vi2GEX3
+R1
+I]LclfJ9?NgATd^[Cfbcfh3
+R2
+R3
+w1742501921
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria1.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria1.v
+!i122 387
+Z16 L0 3 17
+R4
+r1
+!s85 0
+31
+R15
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria1.v|
+!i113 1
+R6
+R7
+vmemoria2
+R11
+!i10b 1
+!s100 dWc5izMNc=GNZPHa:GcFg3
+R1
+IcSNc<gPheR2:M05ccoX^T2
+R2
+R3
+w1742502309
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria2.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria2.v
+!i122 388
+R16
+R4
+r1
+!s85 0
+31
+R15
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria2.v|
+!i113 1
+R6
+R7
+vmemoria3
+R11
+!i10b 1
+!s100 cd3Sl2h27JZ^b[b4:IiRj0
+R1
+Ib?I4Y09z4MQF^ZGIG<bfY3
+R2
+R3
+w1742503295
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria3.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria3.v
+!i122 389
+R16
+R4
+r1
+!s85 0
+31
+R15
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria3.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria3.v|
+!i113 1
+R6
+R7
 vmemoriaFacil
-R14
+!s110 1741956352
 !i10b 1
 !s100 PKBPdOUcnS@^j4MR@9K6Q2
 R1
@@ -302,12 +418,12 @@ w1741554867
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaFacil.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaFacil.v
 !i122 330
-R13
+R12
 R4
 r1
 !s85 0
 31
-Z15 !s108 1741956352.000000
+!s108 1741956352.000000
 !s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaFacil.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaFacil.v|
 !i113 1
@@ -315,77 +431,172 @@ R6
 R7
 nmemoria@facil
 vmemoriaLEDs0
-R14
+R13
 !i10b 1
-!s100 H=b=8m?0WRcFnjl@@PZO92
+!s100 nCSOz?Ue<ck;XXIDh8go;1
 R1
-IWIMIP_faEHgH]Z_nCTCn83
+Im>;276k<`Rf20L2;ZjB4o1
 R2
 R3
-w1741555252
+w1742500980
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs0.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs0.v
-!i122 331
-L0 13 27
+!i122 374
+L0 13 19
 R4
 r1
 !s85 0
 31
-R15
+R14
 !s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs0.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs0.v|
 !i113 1
 R6
 R7
 nmemoria@l@e@ds0
-vneurosync
-R14
+vmemoriaLEDs1
+R11
 !i10b 1
-!s100 MNFa@?_@U?MGEbHGAVgz^1
+!s100 0[oAkV0j5ZQ2nIc^b`R3H1
 R1
-IjmMk_4P@mGE80e;;m9mc<0
+IBl81TEcabz1UmEF1`OB8e0
 R2
 R3
-w1741903374
-8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v
-FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v
-!i122 332
-L0 1 157
+w1742502727
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs1.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs1.v
+!i122 390
+Z17 L0 3 19
 R4
 r1
 !s85 0
 31
 R15
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs1.v|
+!i113 1
+R6
+R7
+nmemoria@l@e@ds1
+vmemoriaLEDs2
+R11
+!i10b 1
+!s100 h?57=OC?il`bd;>UA=jC>2
+R1
+IEIh>H=W7[eJAiWXYCnFWU3
+R2
+R3
+w1742502721
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs2.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs2.v
+!i122 391
+R17
+R4
+r1
+!s85 0
+31
+R15
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs2.v|
+!i113 1
+R6
+R7
+nmemoria@l@e@ds2
+vmemoriaLEDs3
+R11
+!i10b 1
+!s100 EeVWB3_L39_[4_Bhj_DOD3
+R1
+IKVX2ad]lXd[e=DFA3HE1n2
+R2
+R3
+w1742503058
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs3.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs3.v
+!i122 392
+R17
+R4
+r1
+!s85 0
+31
+R15
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs3.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs3.v|
+!i113 1
+R6
+R7
+nmemoria@l@e@ds3
+vmux_4x1
+!s110 1742509851
+!i10b 1
+!s100 7z7jFWOkJ7_G[DECZ]^=b2
+R1
+IIHUIHV3M=X2;oFXcREz?41
+R2
+R3
+w1742503552
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/mux4_1.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/mux4_1.v
+!i122 393
+R12
+R4
+r1
+!s85 0
+31
+R15
+!s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/mux4_1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/mux4_1.v|
+!i113 1
+R6
+R7
+vneurosync
+R13
+!i10b 1
+!s100 h`[RAf;_nAS_^HLLZlZB_0
+R1
+IG:[<3>PeNY9bS_@SkUDge0
+R2
+R3
+w1742506172
+8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v
+FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v
+!i122 375
+L0 1 160
+R4
+r1
+!s85 0
+31
+R14
 !s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v|
 !i113 1
 R6
 R7
 vregistrador_1
-R14
+R13
 !i10b 1
-!s100 S0Nbj>6<WZAjGWNWZj5Eb0
+!s100 1S^lM@lQC>N]ljS2iz;9>0
 R1
-Iz0haL0BSM7zeAF6l>FHUB1
+Ib]fI_=l6Of`Kh94J8YfbV0
 R2
 R3
-w1741904525
+w1741959355
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/registrador_1.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/registrador_1.v
-!i122 333
-L0 1 20
+!i122 376
+L0 3 20
 R4
 r1
 !s85 0
 31
-R15
+R14
 !s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/registrador_1.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/registrador_1.v|
 !i113 1
 R6
 R7
 vregistrador_4
-R14
+R13
 !i10b 1
 !s100 45NaE0zN5R1c;nb0e8L`23
 R1
@@ -395,59 +606,59 @@ R3
 R10
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/registrador_4.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/registrador_4.v
-!i122 334
+!i122 377
 L0 13 20
 R4
 r1
 !s85 0
 31
-R15
+R14
 !s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/registrador_4.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/registrador_4.v|
 !i113 1
 R6
 R7
 vsomador
-R14
+R8
 !i10b 1
-!s100 C8F>_3k9O4;?l?TzFMLBF3
+!s100 CIeEPZHl`X;dT2dK8Gf2:3
 R1
-I@>`>UBGA=Ym;OhHXbFX233
+IW>EDheZ5iMh<]XYL`^4AV1
 R2
 R3
-w1741894004
+w1741959258
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/somador.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/somador.v
-!i122 335
-L0 1 19
+!i122 378
+L0 2 19
 R4
 r1
 !s85 0
 31
-R15
+R9
 !s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/somador.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/somador.v|
 !i113 1
 R6
 R7
 vtb1
-R8
+!s110 1742510557
 !i10b 1
-!s100 Kbc0TXOke@lSHRF@T0m9n0
+!s100 6V;_b0FBCYhX4_?egL[:m1
 R1
-IcUi1^YgbD:O6QE3Xb4SI]3
+I8dL:f0K8IOFlbDz84iRjO3
 R2
 R3
-w1741818274
+w1742510487
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/tb1.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/tb1.v
-!i122 336
-L0 3 317
+!i122 395
+L0 5 332
 R4
 r1
 !s85 0
 31
-R9
+!s108 1742510557.000000
 !s107 C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/tb1.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/tb1.v|
 !i113 1
@@ -456,16 +667,16 @@ R7
 vunidade_controle
 R8
 !i10b 1
-!s100 fJ`CT?3fiYzi^B7:Rki5[1
+!s100 jmdFU5djbbTkoa`B3UXga3
 R1
-I46R2?TRY1KDbokWR501hd3
+IcZW;XNFHjU;HlPAXGe7gN1
 R2
 R3
-w1741898033
+w1742505981
 8C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/unidade_controle.v
 FC:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/unidade_controle.v
-!i122 337
-L0 1 139
+!i122 380
+L0 1 138
 R4
 r1
 !s85 0

@@ -2,15 +2,14 @@
 // Arquivo   : contador_163.v
 // Projeto   : Experiencia 2 - Um Fluxo de Dados Simples
 //------------------------------------------------------------------
-// Descricao : Contador binario de 4 bits, modulo 16
-//             similar ao componente 74163
+// Descricao : Contador binario de 3 bits, modulo 8
 //
 // baseado no componente Vrcntr4u.v do livro Digital Design Principles 
 // and Practices, Fifth Edition, by John F. Wakerly              
 //------------------------------------------------------------------
 // Revisoes  :
 //     Data        Versao  Autor             Descricao
-//     14/12/2023  1.0     Edson Midorikawa  versao inicial
+//     14/12/2022  1.0     Edson Midorikawa  versao inicial
 //------------------------------------------------------------------
 //
 module contador_163 ( clock, clr, ld, ent, enp, D, Q, rco, meio );

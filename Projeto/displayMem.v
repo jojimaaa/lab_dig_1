@@ -2,7 +2,7 @@
 module displayMem (
     input clock,
     input [1:0] displayAddr,
-    input nivel,
+    input [1:0] modo,
     
     output reg [6:0] HEX0,
                      HEX1, 
@@ -13,23 +13,42 @@ module displayMem (
 );
     always @(posedge clock) begin
         case (displayAddr)
-            2'b00: begin            //nivel0/1
-                if (nivel) begin
-                HEX0 <= 7'b1111001; //1
-                HEX1 <= 7'b1000111; //l
-                HEX2 <= 7'b0000110; //e
-                HEX3 <= 7'b1000001; //v
-                HEX4 <= 7'b1111001; //i
-                HEX5 <= 7'b1001000; //n    
-                end else begin
-                HEX0 <= 7'b1000000; //0
-                HEX1 <= 7'b1000111; //l
-                HEX2 <= 7'b0000110; //e
-                HEX3 <= 7'b1000001; //v
-                HEX4 <= 7'b1111001; //i
-                HEX5 <= 7'b1001000; //n  
-                end
-            end 
+            2'b00: begin    //nivel 0/1/2/3
+                case (modo) 
+                    2'b00: begin
+                            HEX0 <= 7'b1000000; //0
+                            HEX1 <= 7'b1000111; //l
+                            HEX2 <= 7'b0000110; //e
+                            HEX3 <= 7'b1000001; //v
+                            HEX4 <= 7'b1111001; //i
+                            HEX5 <= 7'b1001000; //n 
+                    end 
+                    2'b01: begin
+                            HEX0 <= 7'b1111001; //1
+                            HEX1 <= 7'b1000111; //l
+                            HEX2 <= 7'b0000110; //e
+                            HEX3 <= 7'b1000001; //v
+                            HEX4 <= 7'b1111001; //i
+                            HEX5 <= 7'b1001000; //n
+                    end
+                    2'b10: begin
+                            HEX0 <= 7'b0100100; //2
+                            HEX1 <= 7'b1000111; //l
+                            HEX2 <= 7'b0000110; //e
+                            HEX3 <= 7'b1000001; //v
+                            HEX4 <= 7'b1111001; //i
+                            HEX5 <= 7'b1001000; //n
+                    end
+                    2'b11: begin
+                            HEX0 <= 7'b0110000; //3
+                            HEX1 <= 7'b1000111; //l
+                            HEX2 <= 7'b0000110; //e
+                            HEX3 <= 7'b1000001; //v
+                            HEX4 <= 7'b1111001; //i
+                            HEX5 <= 7'b1001000; //n
+                    end
+                endcase
+            end
 
             2'b01: begin            //venceu
                 HEX0 <= 7'b1000001; //u
@@ -48,7 +67,6 @@ module displayMem (
                 HEX4 <= 7'b0000110; //e
                 HEX5 <= 7'b0001100; //p
             end
-
 
             default: begin
                 HEX0 <= 7'b1111111;

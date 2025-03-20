@@ -2,7 +2,8 @@
 clock => clock.IN2
 reset => reset.IN1
 jogar => jogar.IN1
-nivel => nivel.IN2
+mais => mais.IN1
+menos => menos.IN1
 confirma => confirma.IN1
 botoes[0] => botoes[0].IN1
 botoes[1] => botoes[1].IN1
@@ -16,21 +17,6 @@ acertos[0] << fluxo_dados:FD.acertos
 acertos[1] << fluxo_dados:FD.acertos
 pronto << unidade_controle:UC.pronto
 timeout << unidade_controle:UC.timeout_out
-db_estado[0] << unidade_controle:UC.db_estado
-db_estado[1] << unidade_controle:UC.db_estado
-db_estado[2] << unidade_controle:UC.db_estado
-db_estado[3] << unidade_controle:UC.db_estado
-db_acertouJogada << w_acertouJogada.DB_MAX_OUTPUT_PORT_TYPE
-db_jogadaAtualEQUALSacertoAnterior << w_jogadaAtualEQUALSacertoAnterior.DB_MAX_OUTPUT_PORT_TYPE
-db_acertoAnteriorEQUALSzero << w_acertoAnteriorEQUALSzero.DB_MAX_OUTPUT_PORT_TYPE
-db_jogada[0] << fluxo_dados:FD.db_jogada
-db_jogada[1] << fluxo_dados:FD.db_jogada
-db_jogada[2] << fluxo_dados:FD.db_jogada
-db_jogada[3] << fluxo_dados:FD.db_jogada
-db_sequencia[0] << fluxo_dados:FD.db_sequencia
-db_sequencia[1] << fluxo_dados:FD.db_sequencia
-db_sequencia[2] << fluxo_dados:FD.db_sequencia
-db_sequencia[3] << fluxo_dados:FD.db_sequencia
 HEX0[0] << fluxo_dados:FD.HEX0
 HEX0[1] << fluxo_dados:FD.HEX0
 HEX0[2] << fluxo_dados:FD.HEX0
@@ -88,7 +74,6 @@ fimS => Eprox.DATAA
 fimS => Eprox.DATAA
 confirma => Eprox.DATAA
 confirma => Eprox.DATAA
-nivel => ~NO_FANOUT~
 timeout => Eprox.OUTPUTSELECT
 timeout => Eprox.OUTPUTSELECT
 timeout => Eprox.OUTPUTSELECT
@@ -136,18 +121,16 @@ fimLedsOn => Eprox.IN1
 fimLedsOn => Eprox.IN1
 fimLedsOff => Eprox.DATAA
 fimLedsOff => Eprox.DATAA
-zeraT <= zeraL.DB_MAX_OUTPUT_PORT_TYPE
+zeraT <= contaM.DB_MAX_OUTPUT_PORT_TYPE
 contaT <= contaT.DB_MAX_OUTPUT_PORT_TYPE
 zeraR <= zeraR.DB_MAX_OUTPUT_PORT_TYPE
 registraR <= registraR.DB_MAX_OUTPUT_PORT_TYPE
-zeraS <= zeraL.DB_MAX_OUTPUT_PORT_TYPE
+zeraS <= contaM.DB_MAX_OUTPUT_PORT_TYPE
 contaS <= contaS.DB_MAX_OUTPUT_PORT_TYPE
 zeraA <= zeraA.DB_MAX_OUTPUT_PORT_TYPE
 registraA <= registraA.DB_MAX_OUTPUT_PORT_TYPE
 contaA <= contaA.DB_MAX_OUTPUT_PORT_TYPE
-zeraN <= zeraN.DB_MAX_OUTPUT_PORT_TYPE
-registraN <= zeraL.DB_MAX_OUTPUT_PORT_TYPE
-zeraL <= zeraL.DB_MAX_OUTPUT_PORT_TYPE
+zeraL <= contaM.DB_MAX_OUTPUT_PORT_TYPE
 registraL <= registraL.DB_MAX_OUTPUT_PORT_TYPE
 displayAddr[0] <= displayAddr.DB_MAX_OUTPUT_PORT_TYPE
 displayAddr[1] <= displayAddr.DB_MAX_OUTPUT_PORT_TYPE
@@ -158,6 +141,8 @@ contaLedsOff <= apagarAcertos.DB_MAX_OUTPUT_PORT_TYPE
 contaPiscadas <= apagarAcertos.DB_MAX_OUTPUT_PORT_TYPE
 timeout_out <= timeout_out.DB_MAX_OUTPUT_PORT_TYPE
 apagarAcertos <= apagarAcertos.DB_MAX_OUTPUT_PORT_TYPE
+contaM <= contaM.DB_MAX_OUTPUT_PORT_TYPE
+zeraM <= zeraM.DB_MAX_OUTPUT_PORT_TYPE
 db_estado[0] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
 db_estado[1] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
 db_estado[2] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
@@ -165,7 +150,7 @@ db_estado[3] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |neurosync|fluxo_dados:FD
-clock => clock.IN18
+clock => clock.IN26
 contaT => contaT.IN2
 zeraT => zeraT.IN4
 zeraS => _.IN1
@@ -177,7 +162,8 @@ contaA => contaA.IN1
 contaPiscadas => contaPiscadas.IN1
 contaLedsOn => contaLedsOn.IN2
 contaLedsOff => contaLedsOff.IN2
-nivel => nivel.IN2
+mais => mais.IN1
+menos => menos.IN1
 registraR => registraR.IN1
 zeraL => zeraL.IN1
 registraL => registraL.IN1
@@ -210,18 +196,20 @@ displayAddr[0] => displayAddr[0].IN1
 displayAddr[1] => displayAddr[1].IN1
 apagarAcertos => acertos.OUTPUTSELECT
 apagarAcertos => acertos.OUTPUTSELECT
+contaM => contaM.IN1
+zeraM => zeraM.IN1
 acertouJogada <= bigAND:expectedANDbotoes.AandB
 jogadaAtualEQUALSacertoAnterior <= comparador_85:comparador_jogadaAtual_acertoAnterior.AEBo
 acertoAnteriorEQUALSzero <= comparador_85:comparador_acertoAnterior_zero.AEBo
 tem_jogada <= edge_detector:detectorJogada.pulso
-fimS <= contador_163:contadorS.rco
+fimS <= contador_163:contadorS.meio
 fimLedsOff <= contador_m:contadorLedsOFF.fim
 fimLedsOn <= contador_m:contadorLedsON.fim
 fimPiscaLeds <= contador_m:contadorPiscadas.fim
-leds[0] <= registrador_4:registradorLeds.Q
-leds[1] <= registrador_4:registradorLeds.Q
-leds[2] <= registrador_4:registradorLeds.Q
-leds[3] <= registrador_4:registradorLeds.Q
+leds[0] <= s_memoriaLEDs[0].DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= s_memoriaLEDs[1].DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= s_memoriaLEDs[2].DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= s_memoriaLEDs[3].DB_MAX_OUTPUT_PORT_TYPE
 acertos[0] <= acertos.DB_MAX_OUTPUT_PORT_TYPE
 acertos[1] <= acertos.DB_MAX_OUTPUT_PORT_TYPE
 timeout <= registrador_1:registradorTimeout.Q
@@ -275,6 +263,39 @@ db_sequencia[0] <= s_sequencia[0].DB_MAX_OUTPUT_PORT_TYPE
 db_sequencia[1] <= s_sequencia[1].DB_MAX_OUTPUT_PORT_TYPE
 db_sequencia[2] <= s_sequencia[2].DB_MAX_OUTPUT_PORT_TYPE
 db_sequencia[3] <= s_sequencia[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neurosync|fluxo_dados:FD|edge_detector:detectorMais
+clock => reg1.CLK
+clock => reg0.CLK
+reset => reg1.ACLR
+reset => reg0.ACLR
+sinal => reg0.DATAIN
+pulso <= pulso.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neurosync|fluxo_dados:FD|edge_detector:detectorMenos
+clock => reg1.CLK
+clock => reg0.CLK
+reset => reg1.ACLR
+reset => reg0.ACLR
+sinal => reg0.DATAIN
+pulso <= pulso.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neurosync|fluxo_dados:FD|contadorMaisMenos:contadorModo
+clock => Q[0]~reg0.CLK
+clock => Q[1]~reg0.CLK
+reset => Q[0]~reg0.ACLR
+reset => Q[1]~reg0.ACLR
+mais => always0.IN0
+mais => always0.IN1
+menos => always0.IN0
+menos => always0.IN1
+enable => always0.IN1
+enable => always0.IN1
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |neurosync|fluxo_dados:FD|divisorClock:divisorClock
@@ -523,18 +544,28 @@ clock => HEX0[3]~reg0.CLK
 clock => HEX0[4]~reg0.CLK
 clock => HEX0[5]~reg0.CLK
 clock => HEX0[6]~reg0.CLK
-displayAddr[0] => Mux0.IN4
-displayAddr[0] => Decoder0.IN1
+displayAddr[0] => Decoder1.IN1
+displayAddr[0] => Mux0.IN5
+displayAddr[0] => Mux1.IN4
+displayAddr[0] => Mux2.IN5
+displayAddr[0] => Mux3.IN5
 displayAddr[0] => HEX2[6]~reg0.DATAIN
-displayAddr[0] => HEX5[6]~reg0.DATAIN
-displayAddr[1] => Mux0.IN3
-displayAddr[1] => Decoder0.IN0
+displayAddr[0] => HEX5[0]~reg0.DATAIN
+displayAddr[1] => Decoder1.IN0
+displayAddr[1] => Mux0.IN4
+displayAddr[1] => Mux1.IN3
+displayAddr[1] => Mux2.IN4
+displayAddr[1] => Mux3.IN4
 displayAddr[1] => HEX2[5]~reg0.DATAIN
 displayAddr[1] => HEX2[0]~reg0.DATAIN
+displayAddr[1] => HEX3[5]~reg0.DATAIN
 displayAddr[1] => HEX3[2]~reg0.DATAIN
+displayAddr[1] => HEX3[1]~reg0.DATAIN
 displayAddr[1] => HEX5[2]~reg0.DATAIN
-nivel => Mux0.IN5
-nivel => HEX0.DATAB
+modo[0] => Decoder0.IN1
+modo[0] => Mux1.IN5
+modo[1] => Decoder0.IN0
+modo[1] => HEX0.DATAB
 HEX0[0] <= HEX0[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 HEX0[1] <= HEX0[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 HEX0[2] <= HEX0[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -814,22 +845,112 @@ AGBo <= Add3.DB_MAX_OUTPUT_PORT_TYPE
 AEBo <= AEBo.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|neurosync|fluxo_dados:FD|memoriaLEDs0:memoria_0
+|neurosync|fluxo_dados:FD|memoriaLEDs0:memoriaLEDs0
 clock => data_out[0]~reg0.CLK
 clock => data_out[1]~reg0.CLK
 clock => data_out[2]~reg0.CLK
 clock => data_out[3]~reg0.CLK
-address[0] => Decoder0.IN3
-address[1] => Decoder0.IN2
-address[2] => Decoder0.IN1
-address[3] => Decoder0.IN0
+address[0] => Mux0.IN11
+address[0] => Mux1.IN11
+address[0] => Mux2.IN6
+address[0] => Mux3.IN11
+address[1] => Mux0.IN10
+address[1] => Mux1.IN10
+address[1] => Mux2.IN5
+address[1] => Mux3.IN10
+address[2] => Mux0.IN9
+address[2] => Mux1.IN9
+address[2] => Mux3.IN9
+address[3] => Mux0.IN8
+address[3] => Mux1.IN8
+address[3] => Mux2.IN4
+address[3] => Mux3.IN8
 data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|neurosync|fluxo_dados:FD|memoriaFacil:memoria_1
+|neurosync|fluxo_dados:FD|memoriaLEDs1:memoriaLEDs1
+clock => data_out[0]~reg0.CLK
+clock => data_out[1]~reg0.CLK
+clock => data_out[2]~reg0.CLK
+clock => data_out[3]~reg0.CLK
+address[0] => Mux0.IN11
+address[0] => Mux1.IN11
+address[0] => Mux2.IN11
+address[0] => Mux3.IN11
+address[1] => Mux0.IN10
+address[1] => Mux1.IN10
+address[1] => Mux2.IN10
+address[1] => Mux3.IN10
+address[2] => Mux0.IN9
+address[2] => Mux1.IN9
+address[2] => Mux2.IN9
+address[2] => Mux3.IN9
+address[3] => Mux0.IN8
+address[3] => Mux1.IN8
+address[3] => Mux2.IN8
+address[3] => Mux3.IN8
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neurosync|fluxo_dados:FD|memoriaLEDs2:memoriaLEDs2
+clock => data_out[0]~reg0.CLK
+clock => data_out[1]~reg0.CLK
+clock => data_out[2]~reg0.CLK
+clock => data_out[3]~reg0.CLK
+address[0] => Mux0.IN11
+address[0] => Mux1.IN11
+address[0] => Mux2.IN11
+address[1] => Mux0.IN10
+address[1] => Mux1.IN10
+address[1] => Mux2.IN10
+address[1] => Mux3.IN6
+address[2] => Mux0.IN9
+address[2] => Mux1.IN9
+address[2] => Mux2.IN9
+address[2] => Mux3.IN5
+address[3] => Mux0.IN8
+address[3] => Mux1.IN8
+address[3] => Mux2.IN8
+address[3] => Mux3.IN4
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neurosync|fluxo_dados:FD|memoriaLEDs3:memoriaLEDs3
+clock => data_out[0]~reg0.CLK
+clock => data_out[1]~reg0.CLK
+clock => data_out[2]~reg0.CLK
+clock => data_out[3]~reg0.CLK
+address[0] => Mux0.IN11
+address[0] => Mux1.IN11
+address[0] => Mux2.IN11
+address[0] => Mux3.IN6
+address[1] => Mux0.IN10
+address[1] => Mux1.IN10
+address[1] => Mux2.IN10
+address[1] => Mux3.IN5
+address[2] => Mux0.IN9
+address[2] => Mux1.IN9
+address[2] => Mux2.IN9
+address[3] => Mux0.IN8
+address[3] => Mux1.IN8
+address[3] => Mux2.IN8
+address[3] => Mux3.IN4
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neurosync|fluxo_dados:FD|memoria0:memoria0
 clock => data_out[0]~reg0.CLK
 clock => data_out[1]~reg0.CLK
 clock => data_out[2]~reg0.CLK
@@ -854,6 +975,149 @@ data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neurosync|fluxo_dados:FD|memoria1:memoria1
+clock => data_out[0]~reg0.CLK
+clock => data_out[1]~reg0.CLK
+clock => data_out[2]~reg0.CLK
+clock => data_out[3]~reg0.CLK
+address[0] => Mux0.IN9
+address[0] => Mux1.IN9
+address[0] => Mux2.IN9
+address[0] => Mux3.IN9
+address[1] => Mux0.IN8
+address[1] => Mux1.IN8
+address[1] => Mux2.IN8
+address[1] => Mux3.IN8
+address[2] => Mux0.IN7
+address[2] => Mux1.IN7
+address[2] => Mux2.IN7
+address[2] => Mux3.IN7
+address[3] => Mux0.IN6
+address[3] => Mux1.IN6
+address[3] => Mux2.IN6
+address[3] => Mux3.IN6
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neurosync|fluxo_dados:FD|memoria2:memoria2
+clock => data_out[0]~reg0.CLK
+clock => data_out[1]~reg0.CLK
+clock => data_out[2]~reg0.CLK
+clock => data_out[3]~reg0.CLK
+address[0] => Mux0.IN9
+address[0] => Mux1.IN9
+address[0] => Mux2.IN9
+address[0] => Mux3.IN9
+address[1] => Mux0.IN8
+address[1] => Mux1.IN8
+address[1] => Mux2.IN8
+address[1] => Mux3.IN8
+address[2] => Mux0.IN7
+address[2] => Mux1.IN7
+address[2] => Mux2.IN7
+address[2] => Mux3.IN7
+address[3] => Mux0.IN6
+address[3] => Mux1.IN6
+address[3] => Mux2.IN6
+address[3] => Mux3.IN6
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neurosync|fluxo_dados:FD|memoria3:memoria3
+clock => data_out[0]~reg0.CLK
+clock => data_out[1]~reg0.CLK
+clock => data_out[2]~reg0.CLK
+clock => data_out[3]~reg0.CLK
+address[0] => Mux0.IN9
+address[0] => Mux1.IN9
+address[0] => Mux2.IN9
+address[0] => Mux3.IN9
+address[1] => Mux0.IN8
+address[1] => Mux1.IN8
+address[1] => Mux2.IN8
+address[1] => Mux3.IN8
+address[2] => Mux0.IN7
+address[2] => Mux1.IN7
+address[2] => Mux2.IN7
+address[2] => Mux3.IN7
+address[3] => Mux0.IN6
+address[3] => Mux1.IN6
+address[3] => Mux2.IN6
+address[3] => Mux3.IN6
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neurosync|fluxo_dados:FD|mux_4x1:muxLEDS
+in0[0] => Mux3.IN0
+in0[1] => Mux2.IN0
+in0[2] => Mux1.IN0
+in0[3] => Mux0.IN0
+in1[0] => Mux3.IN1
+in1[1] => Mux2.IN1
+in1[2] => Mux1.IN1
+in1[3] => Mux0.IN1
+in2[0] => Mux3.IN2
+in2[1] => Mux2.IN2
+in2[2] => Mux1.IN2
+in2[3] => Mux0.IN2
+in3[0] => Mux3.IN3
+in3[1] => Mux2.IN3
+in3[2] => Mux1.IN3
+in3[3] => Mux0.IN3
+sel[0] => Mux0.IN5
+sel[0] => Mux1.IN5
+sel[0] => Mux2.IN5
+sel[0] => Mux3.IN5
+sel[1] => Mux0.IN4
+sel[1] => Mux1.IN4
+sel[1] => Mux2.IN4
+sel[1] => Mux3.IN4
+out[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neurosync|fluxo_dados:FD|mux_4x1:muxMemorias
+in0[0] => Mux3.IN0
+in0[1] => Mux2.IN0
+in0[2] => Mux1.IN0
+in0[3] => Mux0.IN0
+in1[0] => Mux3.IN1
+in1[1] => Mux2.IN1
+in1[2] => Mux1.IN1
+in1[3] => Mux0.IN1
+in2[0] => Mux3.IN2
+in2[1] => Mux2.IN2
+in2[2] => Mux1.IN2
+in2[3] => Mux0.IN2
+in3[0] => Mux3.IN3
+in3[1] => Mux2.IN3
+in3[2] => Mux1.IN3
+in3[3] => Mux0.IN3
+sel[0] => Mux0.IN5
+sel[0] => Mux1.IN5
+sel[0] => Mux2.IN5
+sel[0] => Mux3.IN5
+sel[1] => Mux0.IN4
+sel[1] => Mux1.IN4
+sel[1] => Mux2.IN4
+sel[1] => Mux3.IN4
+out[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |neurosync|fluxo_dados:FD|registrador_4:registrador
@@ -938,14 +1202,6 @@ Q[3] <= IQ[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |neurosync|fluxo_dados:FD|registrador_1:registradorTimeout
-clock => IQ.CLK
-clear => IQ.ACLR
-enable => IQ.ENA
-D => IQ.DATAIN
-Q <= IQ.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|neurosync|fluxo_dados:FD|registrador_1:registradorNivel
 clock => IQ.CLK
 clear => IQ.ACLR
 enable => IQ.ENA

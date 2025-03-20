@@ -4,7 +4,6 @@ module unidade_controle (
  input jogar,
  input fimS,
  input confirma,
- input nivel,
  input timeout,
  input tem_jogada,
  input acertouJogada,
@@ -22,8 +21,6 @@ module unidade_controle (
  output reg zeraA,
  output reg registraA,
  output reg contaA,
- output reg zeraN,
- output reg registraN,
  output reg zeraL,
  output reg registraL,
  output reg [1:0] displayAddr,
@@ -34,6 +31,8 @@ module unidade_controle (
  output reg contaPiscadas,
  output reg timeout_out,
  output reg apagarAcertos,
+ output reg contaM,
+ output reg zeraM,
 
     // saida de depuracao
  output reg [3:0] db_estado
@@ -104,8 +103,6 @@ module unidade_controle (
         registraL = (Eatual == inicia_sequencia) ? 1'b1 : 1'b0;
         zeraT = (Eatual == preparacao) ? 1'b1 : 1'b0;
         contaT = (Eatual == inicia_sequencia || Eatual == espera_jogada || Eatual == registra || Eatual ==comparacao || Eatual == proximo || Eatual == acende_segundo_acerto || Eatual == pisca_acertos_on || Eatual == pisca_acertos_off || Eatual == is_ultima_sequencia || Eatual == proxima_sequencia) ? 1'b1 : 1'b0;
-        zeraN = (Eatual == inicial) ? 1'b1 : 1'b0;
-        registraN = (Eatual == preparacao) ? 1'b1 : 1'b0;
         zeraL = (Eatual == preparacao) ? 1'b1 : 1'b0;
         timeout_out = (Eatual == estado_timeout) ? 1'b1 : 1'b0;
         contaLedsOn = (Eatual == pisca_acertos_on) ? 1'b1 : 1'b0;
@@ -113,6 +110,8 @@ module unidade_controle (
         contaPiscadas = (Eatual == pisca_acertos_off) ? 1'b1 : 1'b0;
         apagarAcertos = (Eatual == pisca_acertos_off) ? 1'b1 : 1'b0;
         displayFromMem = (Eatual == preparacao || Eatual == final_com_acerto || Eatual == estado_timeout) ? 1'b1 : 1'b0;
+        contaM = (Eatual == preparacao) ? 1'b1 : 1'b0;
+        zeraM = (Eatual == inicial) ? 1'b1 : 1'b0;
         
 		  
         // Saida de depuracao (estado)

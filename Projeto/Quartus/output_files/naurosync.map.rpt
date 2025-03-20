@@ -1,5 +1,5 @@
 Analysis & Synthesis report for naurosync
-Fri Mar 14 09:59:20 2025
+Thu Mar 20 18:36:11 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -26,7 +26,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  18. Parameter Settings for User Entity Instance: fluxo_dados:FD|contador_m:contadorAcertos
  19. Port Connectivity Checks: "fluxo_dados:FD|edge_detector:detectorContaPiscadas"
  20. Port Connectivity Checks: "fluxo_dados:FD|edge_detector:detectorJogada"
- 21. Port Connectivity Checks: "fluxo_dados:FD|registrador_1:registradorNivel"
+ 21. Port Connectivity Checks: "fluxo_dados:FD|registrador_4:registradorLeds"
  22. Port Connectivity Checks: "fluxo_dados:FD|comparador_85:comparador_acertoAnterior_zero"
  23. Port Connectivity Checks: "fluxo_dados:FD|comparador_85:comparador_jogadaAtual_acertoAnterior"
  24. Port Connectivity Checks: "fluxo_dados:FD|contador_m:contadorAcertos"
@@ -36,11 +36,14 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  28. Port Connectivity Checks: "fluxo_dados:FD|contador_m:contadorLedsON"
  29. Port Connectivity Checks: "fluxo_dados:FD|somador:subtratorTimer7Seg"
  30. Port Connectivity Checks: "fluxo_dados:FD|contador_m:contadorTimeout"
- 31. Port Connectivity Checks: "unidade_controle:UC"
- 32. Post-Synthesis Netlist Statistics for Top Partition
- 33. Elapsed Time Per Partition
- 34. Analysis & Synthesis Messages
- 35. Analysis & Synthesis Suppressed Messages
+ 31. Port Connectivity Checks: "fluxo_dados:FD|edge_detector:detectorMenos"
+ 32. Port Connectivity Checks: "fluxo_dados:FD|edge_detector:detectorMais"
+ 33. Port Connectivity Checks: "fluxo_dados:FD"
+ 34. Port Connectivity Checks: "unidade_controle:UC"
+ 35. Post-Synthesis Netlist Statistics for Top Partition
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
+ 38. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -67,14 +70,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Mar 14 09:59:20 2025       ;
+; Analysis & Synthesis Status     ; Successful - Thu Mar 20 18:36:11 2025       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; naurosync                                   ;
 ; Top-level Entity Name           ; neurosync                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 119                                         ;
-; Total pins                      ; 74                                          ;
+; Total registers                 ; 141                                         ;
+; Total pins                      ; 60                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -196,6 +199,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                     ; Library ;
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------+---------+
+; ../mux4_1.v                      ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/mux4_1.v               ;         ;
+; ../memoriaLEDs3.v                ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs3.v         ;         ;
+; ../memoriaLEDs2.v                ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs2.v         ;         ;
+; ../memoriaLEDs1.v                ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs1.v         ;         ;
+; ../memoriaLEDs0.v                ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs0.v         ;         ;
+; ../memoria3.v                    ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria3.v             ;         ;
+; ../memoria2.v                    ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria2.v             ;         ;
+; ../memoria1.v                    ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria1.v             ;         ;
+; ../memoria0.v                    ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria0.v             ;         ;
+; ../contadorMaisMenos.v           ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contadorMaisMenos.v    ;         ;
 ; ../divisorClock.v                ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/divisorClock.v         ;         ;
 ; ../displayMem.v                  ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/displayMem.v           ;         ;
 ; ../binaryTObcd.v                 ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/binaryTObcd.v          ;         ;
@@ -204,8 +217,6 @@ https://fpgasoftware.intel.com/eula.
 ; ../registrador_4.v               ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/registrador_4.v        ;         ;
 ; ../registrador_1.v               ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/registrador_1.v        ;         ;
 ; ../neurosync.v                   ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v            ;         ;
-; ../memoriaLEDs0.v                ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs0.v         ;         ;
-; ../memoriaFacil.v                ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaFacil.v         ;         ;
 ; ../hexa7seg.v                    ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/hexa7seg.v             ;         ;
 ; ../fluxo_dados.v                 ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v          ;         ;
 ; ../edge_detector.v               ; yes             ; User Verilog HDL File  ; C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/edge_detector.v        ;         ;
@@ -222,25 +233,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 111         ;
+; Estimate of Logic utilization (ALMs needed) ; 129         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 188         ;
-;     -- 7 input functions                    ; 1           ;
-;     -- 6 input functions                    ; 28          ;
-;     -- 5 input functions                    ; 22          ;
-;     -- 4 input functions                    ; 46          ;
-;     -- <=3 input functions                  ; 91          ;
+; Combinational ALUT usage for logic          ; 214         ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 38          ;
+;     -- 5 input functions                    ; 27          ;
+;     -- 4 input functions                    ; 45          ;
+;     -- <=3 input functions                  ; 104         ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 119         ;
+; Dedicated logic registers                   ; 141         ;
 ;                                             ;             ;
-; I/O pins                                    ; 74          ;
+; I/O pins                                    ; 60          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 110         ;
-; Total fan-out                               ; 1208        ;
-; Average fan-out                             ; 2.65        ;
+; Maximum fan-out                             ; 132         ;
+; Total fan-out                               ; 1359        ;
+; Average fan-out                             ; 2.86        ;
 +---------------------------------------------+-------------+
 
 
@@ -249,33 +260,41 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                           ; Entity Name          ; Library Name ;
 +-------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------+----------------------+--------------+
-; |neurosync                                                  ; 188 (0)             ; 119 (0)                   ; 0                 ; 0          ; 74   ; 0            ; |neurosync                                                                    ; neurosync            ; work         ;
-;    |fluxo_dados:FD|                                         ; 158 (31)            ; 105 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD                                                     ; fluxo_dados          ; work         ;
-;       |bigAND:expectedANDbotoes|                            ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|bigAND:expectedANDbotoes                            ; bigAND               ; work         ;
+; |neurosync                                                  ; 214 (0)             ; 141 (0)                   ; 0                 ; 0          ; 60   ; 0            ; |neurosync                                                                    ; neurosync            ; work         ;
+;    |fluxo_dados:FD|                                         ; 190 (36)            ; 127 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD                                                     ; fluxo_dados          ; work         ;
+;       |bigAND:expectedANDbotoes|                            ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|bigAND:expectedANDbotoes                            ; bigAND               ; work         ;
 ;       |binaryTObcd:binaryTObcd|                             ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|binaryTObcd:binaryTObcd                             ; binaryTObcd          ; work         ;
 ;       |comparador_85:comparador_acertoAnterior_zero|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|comparador_85:comparador_acertoAnterior_zero        ; comparador_85        ; work         ;
-;       |comparador_85:comparador_jogadaAtual_acertoAnterior| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|comparador_85:comparador_jogadaAtual_acertoAnterior ; comparador_85        ; work         ;
-;       |contador_163:contadorS|                              ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|contador_163:contadorS                              ; contador_163         ; work         ;
+;       |comparador_85:comparador_jogadaAtual_acertoAnterior| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|comparador_85:comparador_jogadaAtual_acertoAnterior ; comparador_85        ; work         ;
+;       |contadorMaisMenos:contadorModo|                      ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|contadorMaisMenos:contadorModo                      ; contadorMaisMenos    ; work         ;
+;       |contador_163:contadorS|                              ; 9 (9)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|contador_163:contadorS                              ; contador_163         ; work         ;
 ;       |contador_m:contadorAcertos|                          ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|contador_m:contadorAcertos                          ; contador_m           ; work         ;
 ;       |contador_m:contadorLedsOFF|                          ; 12 (12)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|contador_m:contadorLedsOFF                          ; contador_m           ; work         ;
 ;       |contador_m:contadorLedsON|                           ; 14 (14)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|contador_m:contadorLedsON                           ; contador_m           ; work         ;
 ;       |contador_m:contadorPiscadas|                         ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|contador_m:contadorPiscadas                         ; contador_m           ; work         ;
 ;       |contador_m:contadorTimeout|                          ; 11 (11)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|contador_m:contadorTimeout                          ; contador_m           ; work         ;
 ;       |decodificadorAcertos:decodificadorAcertos|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|decodificadorAcertos:decodificadorAcertos           ; decodificadorAcertos ; work         ;
-;       |displayMem:displayMem|                               ; 8 (8)               ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|displayMem:displayMem                               ; displayMem           ; work         ;
+;       |displayMem:displayMem|                               ; 12 (12)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|displayMem:displayMem                               ; displayMem           ; work         ;
 ;       |divisorClock:divisorClock|                           ; 14 (14)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|divisorClock:divisorClock                           ; divisorClock         ; work         ;
 ;       |edge_detector:detectorContaPiscadas|                 ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|edge_detector:detectorContaPiscadas                 ; edge_detector        ; work         ;
 ;       |edge_detector:detectorJogada|                        ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|edge_detector:detectorJogada                        ; edge_detector        ; work         ;
-;       |hexa7seg:hex3_converter|                             ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|hexa7seg:hex3_converter                             ; hexa7seg             ; work         ;
+;       |edge_detector:detectorMais|                          ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|edge_detector:detectorMais                          ; edge_detector        ; work         ;
+;       |edge_detector:detectorMenos|                         ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|edge_detector:detectorMenos                         ; edge_detector        ; work         ;
+;       |hexa7seg:hex3_converter|                             ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|hexa7seg:hex3_converter                             ; hexa7seg             ; work         ;
 ;       |hexa7seg:hex4_converter|                             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|hexa7seg:hex4_converter                             ; hexa7seg             ; work         ;
-;       |memoriaFacil:memoria_1|                              ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|memoriaFacil:memoria_1                              ; memoriaFacil         ; work         ;
-;       |memoriaLEDs0:memoria_0|                              ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|memoriaLEDs0:memoria_0                              ; memoriaLEDs0         ; work         ;
+;       |memoria0:memoria0|                                   ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|memoria0:memoria0                                   ; memoria0             ; work         ;
+;       |memoria1:memoria1|                                   ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|memoria1:memoria1                                   ; memoria1             ; work         ;
+;       |memoria3:memoria3|                                   ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|memoria3:memoria3                                   ; memoria3             ; work         ;
+;       |memoriaLEDs0:memoriaLEDs0|                           ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|memoriaLEDs0:memoriaLEDs0                           ; memoriaLEDs0         ; work         ;
+;       |memoriaLEDs1:memoriaLEDs1|                           ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|memoriaLEDs1:memoriaLEDs1                           ; memoriaLEDs1         ; work         ;
+;       |memoriaLEDs2:memoriaLEDs2|                           ; 2 (2)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|memoriaLEDs2:memoriaLEDs2                           ; memoriaLEDs2         ; work         ;
+;       |memoriaLEDs3:memoriaLEDs3|                           ; 2 (2)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|memoriaLEDs3:memoriaLEDs3                           ; memoriaLEDs3         ; work         ;
+;       |mux_4x1:muxLEDS|                                     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|mux_4x1:muxLEDS                                     ; mux_4x1              ; work         ;
 ;       |registrador_1:registradorTimeout|                    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|registrador_1:registradorTimeout                    ; registrador_1        ; work         ;
 ;       |registrador_4:registradorAcertoAnterior|             ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|registrador_4:registradorAcertoAnterior             ; registrador_4        ; work         ;
-;       |registrador_4:registradorLeds|                       ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|registrador_4:registradorLeds                       ; registrador_4        ; work         ;
 ;       |registrador_4:registrador|                           ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|registrador_4:registrador                           ; registrador_4        ; work         ;
 ;       |somador:subtratorTimer7Seg|                          ; 8 (8)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |neurosync|fluxo_dados:FD|somador:subtratorTimer7Seg                          ; somador              ; work         ;
-;    |unidade_controle:UC|                                    ; 30 (30)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |neurosync|unidade_controle:UC                                                ; unidade_controle     ; work         ;
+;    |unidade_controle:UC|                                    ; 24 (24)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |neurosync|unidade_controle:UC                                                ; unidade_controle     ; work         ;
 +-------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -308,19 +327,24 @@ Encoding Type:  One-Hot
 +---------------------------------------------------+----------------------------------------------------------+
 ; Register name                                     ; Reason for Removal                                       ;
 +---------------------------------------------------+----------------------------------------------------------+
-; fluxo_dados:FD|displayMem:displayMem|HEX3[0,1,5]  ; Stuck at VCC due to stuck port data_in                   ;
 ; fluxo_dados:FD|displayMem:displayMem|HEX1[1,2]    ; Stuck at VCC due to stuck port data_in                   ;
-; fluxo_dados:FD|displayMem:displayMem|HEX0[6]      ; Stuck at VCC due to stuck port data_in                   ;
-; fluxo_dados:FD|displayMem:displayMem|HEX4[0,3..6] ; Merged with fluxo_dados:FD|displayMem:displayMem|HEX3[6] ;
-; fluxo_dados:FD|displayMem:displayMem|HEX5[4]      ; Merged with fluxo_dados:FD|displayMem:displayMem|HEX3[4] ;
+; fluxo_dados:FD|displayMem:displayMem|HEX5[6]      ; Merged with fluxo_dados:FD|displayMem:displayMem|HEX3[6] ;
+; fluxo_dados:FD|displayMem:displayMem|HEX3[1,2]    ; Merged with fluxo_dados:FD|displayMem:displayMem|HEX3[5] ;
+; fluxo_dados:FD|displayMem:displayMem|HEX5[2]      ; Merged with fluxo_dados:FD|displayMem:displayMem|HEX3[5] ;
+; fluxo_dados:FD|displayMem:displayMem|HEX5[1,4,5]  ; Merged with fluxo_dados:FD|displayMem:displayMem|HEX3[4] ;
 ; fluxo_dados:FD|displayMem:displayMem|HEX4[1,2]    ; Merged with fluxo_dados:FD|displayMem:displayMem|HEX3[3] ;
-; fluxo_dados:FD|displayMem:displayMem|HEX5[2]      ; Merged with fluxo_dados:FD|displayMem:displayMem|HEX3[2] ;
-; fluxo_dados:FD|displayMem:displayMem|HEX5[0,1]    ; Merged with fluxo_dados:FD|displayMem:displayMem|HEX5[5] ;
+; fluxo_dados:FD|displayMem:displayMem|HEX5[3]      ; Merged with fluxo_dados:FD|displayMem:displayMem|HEX3[0] ;
+; fluxo_dados:FD|displayMem:displayMem|HEX4[0,3..5] ; Merged with fluxo_dados:FD|displayMem:displayMem|HEX4[6] ;
+; fluxo_dados:FD|memoria2:memoria2|data_out[0]      ; Merged with fluxo_dados:FD|memoria1:memoria1|data_out[0] ;
+; fluxo_dados:FD|memoria3:memoria3|data_out[0]      ; Merged with fluxo_dados:FD|memoria1:memoria1|data_out[0] ;
+; fluxo_dados:FD|memoria2:memoria2|data_out[1]      ; Merged with fluxo_dados:FD|memoria1:memoria1|data_out[1] ;
+; fluxo_dados:FD|memoria2:memoria2|data_out[2]      ; Merged with fluxo_dados:FD|memoria1:memoria1|data_out[2] ;
+; fluxo_dados:FD|memoria2:memoria2|data_out[3]      ; Merged with fluxo_dados:FD|memoria1:memoria1|data_out[3] ;
 ; unidade_controle:UC|Eatual~4                      ; Lost fanout                                              ;
 ; unidade_controle:UC|Eatual~5                      ; Lost fanout                                              ;
 ; unidade_controle:UC|Eatual~6                      ; Lost fanout                                              ;
 ; unidade_controle:UC|Eatual~7                      ; Lost fanout                                              ;
-; Total Number of Removed Registers = 21            ;                                                          ;
+; Total Number of Removed Registers = 25            ;                                                          ;
 +---------------------------------------------------+----------------------------------------------------------+
 
 
@@ -329,31 +353,36 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 119   ;
+; Total registers                              ; 141   ;
 ; Number of registers using Synchronous Clear  ; 40    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 69    ;
+; Number of registers using Synchronous Load   ; 4     ;
+; Number of registers using Asynchronous Clear ; 67    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 60    ;
+; Number of registers using Clock Enable       ; 79    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |neurosync|fluxo_dados:FD|contador_163:contadorS|Q[0]         ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |neurosync|fluxo_dados:FD|contador_m:contadorLedsON|Q[0]      ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |neurosync|fluxo_dados:FD|contador_m:contadorLedsOFF|Q[5]     ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |neurosync|fluxo_dados:FD|memoriaFacil:memoria_1|data_out[2]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |neurosync|fluxo_dados:FD|binaryTObcd:binaryTObcd|unidades[3] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |neurosync|fluxo_dados:FD|HEX3[1]                             ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |neurosync|fluxo_dados:FD|HEX3[4]                             ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |neurosync|fluxo_dados:FD|binaryTObcd:binaryTObcd|dezenas[3]  ;
-; 10:1               ; 6 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |neurosync|fluxo_dados:FD|HEX5[5]                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |neurosync|fluxo_dados:FD|contador_163:contadorS|Q[3]           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |neurosync|fluxo_dados:FD|displayMem:displayMem|HEX0[4]         ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |neurosync|fluxo_dados:FD|contador_m:contadorLedsON|Q[1]        ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |neurosync|fluxo_dados:FD|contador_m:contadorLedsOFF|Q[4]       ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |neurosync|fluxo_dados:FD|memoriaLEDs3:memoriaLEDs3|data_out[0] ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 28 LEs               ; 42 LEs                 ; Yes        ; |neurosync|fluxo_dados:FD|memoria1:memoria1|data_out[2]         ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |neurosync|fluxo_dados:FD|memoria0:memoria0|data_out[3]         ;
+; 16:1               ; 13 bits   ; 130 LEs       ; 65 LEs               ; 65 LEs                 ; Yes        ; |neurosync|fluxo_dados:FD|memoriaLEDs1:memoriaLEDs1|data_out[1] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |neurosync|fluxo_dados:FD|mux_4x1:muxMemorias|Mux2              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |neurosync|fluxo_dados:FD|mux_4x1:muxLEDS|Mux2                  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |neurosync|fluxo_dados:FD|binaryTObcd:binaryTObcd|unidades[1]   ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |neurosync|fluxo_dados:FD|HEX4[5]                               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |neurosync|fluxo_dados:FD|binaryTObcd:binaryTObcd|dezenas[1]    ;
+; 10:1               ; 6 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |neurosync|fluxo_dados:FD|HEX5[0]                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 
 
 +------------------------------------------------------------------+
@@ -463,7 +492,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "fluxo_dados:FD|registrador_1:registradorNivel"                                      ;
+; Port Connectivity Checks: "fluxo_dados:FD|registrador_4:registradorLeds"                                       ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -517,7 +546,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ld   ; Input  ; Info     ; Stuck at VCC                           ;
 ; ent  ; Input  ; Info     ; Stuck at VCC                           ;
 ; D    ; Input  ; Info     ; Stuck at GND                           ;
-; meio ; Output ; Info     ; Explicitly unconnected                 ;
+; rco  ; Output ; Info     ; Explicitly unconnected                 ;
 +------+--------+----------+----------------------------------------+
 
 
@@ -577,14 +606,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "unidade_controle:UC"                                                                     ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; zeraN     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; registraN ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxo_dados:FD|edge_detector:detectorMenos" ;
++-------+-------+----------+---------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                     ;
++-------+-------+----------+---------------------------------------------+
+; reset ; Input ; Info     ; Explicitly unconnected                      ;
++-------+-------+----------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxo_dados:FD|edge_detector:detectorMais" ;
++-------+-------+----------+--------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                    ;
++-------+-------+----------+--------------------------------------------+
+; reset ; Input ; Info     ; Explicitly unconnected                     ;
++-------+-------+----------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxo_dados:FD"                                                                                                  ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                                                  ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; db_jogada    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; db_sequencia ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "unidade_controle:UC"                                                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                  ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; db_estado ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -592,32 +648,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 119                         ;
-;     CLR               ; 16                          ;
+; arriav_ff             ; 141                         ;
+;     CLR               ; 18                          ;
 ;     CLR SCLR          ; 10                          ;
-;     ENA               ; 14                          ;
-;     ENA CLR           ; 16                          ;
+;     ENA               ; 33                          ;
+;     ENA CLR           ; 12                          ;
 ;     ENA CLR SCLR      ; 27                          ;
 ;     ENA SCLR          ; 3                           ;
-;     plain             ; 33                          ;
-; arriav_lcell_comb     ; 191                         ;
+;     ENA SLD           ; 4                           ;
+;     plain             ; 34                          ;
+; arriav_lcell_comb     ; 219                         ;
 ;     arith             ; 45                          ;
 ;         1 data inputs ; 44                          ;
 ;         2 data inputs ; 1                           ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 145                         ;
+;     normal            ; 174                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 28                          ;
-;         3 data inputs ; 18                          ;
-;         4 data inputs ; 46                          ;
-;         5 data inputs ; 22                          ;
-;         6 data inputs ; 28                          ;
-; boundary_port         ; 74                          ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 27                          ;
+;         3 data inputs ; 30                          ;
+;         4 data inputs ; 45                          ;
+;         5 data inputs ; 27                          ;
+;         6 data inputs ; 38                          ;
+; boundary_port         ; 60                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.18                        ;
+; Average LUT depth     ; 2.12                        ;
 +-----------------------+-----------------------------+
 
 
@@ -636,98 +691,122 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Mar 14 09:59:04 2025
+    Info: Processing started: Thu Mar 20 18:35:58 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off naurosync -c naurosync
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/mux4_1.v
+    Info (12023): Found entity 1: mux_4x1 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/mux4_1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/memorialeds3.v
+    Info (12023): Found entity 1: memoriaLEDs3 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs3.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/memorialeds2.v
+    Info (12023): Found entity 1: memoriaLEDs2 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs2.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/memorialeds1.v
+    Info (12023): Found entity 1: memoriaLEDs1 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs1.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/memorialeds0.v
+    Info (12023): Found entity 1: memoriaLEDs0 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs0.v Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/memoria3.v
+    Info (12023): Found entity 1: memoria3 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria3.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/memoria2.v
+    Info (12023): Found entity 1: memoria2 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria2.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/memoria1.v
+    Info (12023): Found entity 1: memoria1 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria1.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/memoria0.v
+    Info (12023): Found entity 1: memoria0 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria0.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/contadormaismenos.v
+    Info (12023): Found entity 1: contadorMaisMenos File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contadorMaisMenos.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/divisorclock.v
-    Info (12023): Found entity 1: divisorClock File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/divisorClock.v Line: 1
+    Info (12023): Found entity 1: divisorClock File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/divisorClock.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/displaymem.v
-    Info (12023): Found entity 1: displayMem File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/displayMem.v Line: 1
+    Info (12023): Found entity 1: displayMem File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/displayMem.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/binarytobcd.v
     Info (12023): Found entity 1: binaryTObcd File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/binaryTObcd.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/unidade_controle.v
     Info (12023): Found entity 1: unidade_controle File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/unidade_controle.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/tb1.v
-    Info (12023): Found entity 1: tb1 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/tb1.v Line: 3
+    Info (12023): Found entity 1: tb1 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/tb1.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/somador.v
-    Info (12023): Found entity 1: somador File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/somador.v Line: 1
+    Info (12023): Found entity 1: somador File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/somador.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/registrador_4.v
     Info (12023): Found entity 1: registrador_4 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/registrador_4.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/registrador_1.v
-    Info (12023): Found entity 1: registrador_1 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/registrador_1.v Line: 1
+    Info (12023): Found entity 1: registrador_1 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/registrador_1.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/neurosync.v
     Info (12023): Found entity 1: neurosync File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/memorialeds0.v
-    Info (12023): Found entity 1: memoriaLEDs0 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaLEDs0.v Line: 13
-Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/memoriafacil.v
-    Info (12023): Found entity 1: memoriaFacil File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaFacil.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/hexa7seg.v
     Info (12023): Found entity 1: hexa7seg File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/hexa7seg.v Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/full_edge_detector.v
-    Info (12023): Found entity 1: full_edge_detector File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/full_edge_detector.v Line: 21
+    Info (12023): Found entity 1: full_edge_detector File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/full_edge_detector.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/fluxo_dados.v
     Info (12023): Found entity 1: fluxo_dados File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/edge_detector.v
     Info (12023): Found entity 1: edge_detector File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/edge_detector.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/decodificadoracertos.v
-    Info (12023): Found entity 1: decodificadorAcertos File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/decodificadorAcertos.v Line: 1
+    Info (12023): Found entity 1: decodificadorAcertos File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/decodificadorAcertos.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/contador_m.v
     Info (12023): Found entity 1: contador_m File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contador_m.v Line: 20
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/contador_163.v
-    Info (12023): Found entity 1: contador_163 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contador_163.v Line: 16
+    Info (12023): Found entity 1: contador_163 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contador_163.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/comparador_85.v
     Info (12023): Found entity 1: comparador_85 File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/comparador_85.v Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file /engenharia_de_computacao_poli_usp/5_periodo_(2025_1)/lab_dig_1/projeto/bigand.v
-    Info (12023): Found entity 1: bigAND File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/bigAND.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at fluxo_dados.v(276): created implicit net for "zeraN" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 276
-Warning (10236): Verilog HDL Implicit Net warning at fluxo_dados.v(277): created implicit net for "registraN" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 277
-Warning (10236): Verilog HDL Implicit Net warning at fluxo_dados.v(338): created implicit net for "acertoAnterior" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 338
+    Info (12023): Found entity 1: bigAND File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/bigAND.v Line: 2
+Warning (10236): Verilog HDL Implicit Net warning at fluxo_dados.v(421): created implicit net for "acertoAnterior" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 421
 Info (12127): Elaborating entity "neurosync" for the top level hierarchy
 Info (12128): Elaborating entity "unidade_controle" for hierarchy "unidade_controle:UC" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v Line: 103
-Info (12128): Elaborating entity "fluxo_dados" for hierarchy "fluxo_dados:FD" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v Line: 150
-Warning (10036): Verilog HDL or VHDL warning at fluxo_dados.v(338): object "acertoAnterior" assigned a value but never read File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 338
-Warning (10230): Verilog HDL assignment warning at fluxo_dados.v(338): truncated value with size 4 to match size of target (1) File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 338
-Info (12128): Elaborating entity "divisorClock" for hierarchy "fluxo_dados:FD|divisorClock:divisorClock" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 86
-Warning (10230): Verilog HDL assignment warning at divisorClock.v(18): truncated value with size 32 to match size of target (10) File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/divisorClock.v Line: 18
-Info (12128): Elaborating entity "contador_m" for hierarchy "fluxo_dados:FD|contador_m:contadorTimeout" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 97
-Info (12128): Elaborating entity "somador" for hierarchy "fluxo_dados:FD|somador:subtratorTimer7Seg" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 106
-Info (12128): Elaborating entity "binaryTObcd" for hierarchy "fluxo_dados:FD|binaryTObcd:binaryTObcd" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 115
-Info (12128): Elaborating entity "displayMem" for hierarchy "fluxo_dados:FD|displayMem:displayMem" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 128
-Info (12128): Elaborating entity "contador_m" for hierarchy "fluxo_dados:FD|contador_m:contadorLedsON" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 139
-Info (12128): Elaborating entity "contador_m" for hierarchy "fluxo_dados:FD|contador_m:contadorPiscadas" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 160
-Info (12128): Elaborating entity "contador_163" for hierarchy "fluxo_dados:FD|contador_163:contadorS" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 173
-Info (12128): Elaborating entity "decodificadorAcertos" for hierarchy "fluxo_dados:FD|decodificadorAcertos:decodificadorAcertos" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 190
-Info (12128): Elaborating entity "comparador_85" for hierarchy "fluxo_dados:FD|comparador_85:comparador_jogadaAtual_acertoAnterior" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 201
-Info (12128): Elaborating entity "memoriaLEDs0" for hierarchy "fluxo_dados:FD|memoriaLEDs0:memoria_0" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 220
-Info (12128): Elaborating entity "memoriaFacil" for hierarchy "fluxo_dados:FD|memoriaFacil:memoria_1" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 227
-Info (10264): Verilog HDL Case Statement information at memoriaFacil.v(8): all case item expressions in this case statement are onehot File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoriaFacil.v Line: 8
-Info (12128): Elaborating entity "registrador_4" for hierarchy "fluxo_dados:FD|registrador_4:registrador" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 237
-Info (12128): Elaborating entity "bigAND" for hierarchy "fluxo_dados:FD|bigAND:expectedANDbotoes" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 252
-Info (12128): Elaborating entity "registrador_1" for hierarchy "fluxo_dados:FD|registrador_1:registradorTimeout" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 270
-Info (12128): Elaborating entity "edge_detector" for hierarchy "fluxo_dados:FD|edge_detector:detectorJogada" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 289
-Info (12128): Elaborating entity "hexa7seg" for hierarchy "fluxo_dados:FD|hexa7seg:hex3_converter" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 306
+Info (12128): Elaborating entity "fluxo_dados" for hierarchy "fluxo_dados:FD" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v Line: 153
+Warning (10036): Verilog HDL or VHDL warning at fluxo_dados.v(421): object "acertoAnterior" assigned a value but never read File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 421
+Warning (10230): Verilog HDL assignment warning at fluxo_dados.v(421): truncated value with size 4 to match size of target (1) File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 421
+Info (12128): Elaborating entity "edge_detector" for hierarchy "fluxo_dados:FD|edge_detector:detectorMais" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 101
+Info (12128): Elaborating entity "contadorMaisMenos" for hierarchy "fluxo_dados:FD|contadorMaisMenos:contadorModo" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 117
+Warning (10230): Verilog HDL assignment warning at contadorMaisMenos.v(14): truncated value with size 32 to match size of target (2) File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contadorMaisMenos.v Line: 14
+Warning (10230): Verilog HDL assignment warning at contadorMaisMenos.v(16): truncated value with size 32 to match size of target (2) File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/contadorMaisMenos.v Line: 16
+Info (12128): Elaborating entity "divisorClock" for hierarchy "fluxo_dados:FD|divisorClock:divisorClock" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 123
+Warning (10230): Verilog HDL assignment warning at divisorClock.v(20): truncated value with size 32 to match size of target (10) File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/divisorClock.v Line: 20
+Info (12128): Elaborating entity "contador_m" for hierarchy "fluxo_dados:FD|contador_m:contadorTimeout" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 134
+Info (12128): Elaborating entity "somador" for hierarchy "fluxo_dados:FD|somador:subtratorTimer7Seg" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 143
+Info (12128): Elaborating entity "binaryTObcd" for hierarchy "fluxo_dados:FD|binaryTObcd:binaryTObcd" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 152
+Info (12128): Elaborating entity "displayMem" for hierarchy "fluxo_dados:FD|displayMem:displayMem" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 165
+Info (12128): Elaborating entity "contador_m" for hierarchy "fluxo_dados:FD|contador_m:contadorLedsON" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 176
+Info (12128): Elaborating entity "contador_m" for hierarchy "fluxo_dados:FD|contador_m:contadorPiscadas" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 197
+Info (12128): Elaborating entity "contador_163" for hierarchy "fluxo_dados:FD|contador_163:contadorS" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 210
+Info (12128): Elaborating entity "decodificadorAcertos" for hierarchy "fluxo_dados:FD|decodificadorAcertos:decodificadorAcertos" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 227
+Info (12128): Elaborating entity "comparador_85" for hierarchy "fluxo_dados:FD|comparador_85:comparador_jogadaAtual_acertoAnterior" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 238
+Info (12128): Elaborating entity "memoriaLEDs0" for hierarchy "fluxo_dados:FD|memoriaLEDs0:memoriaLEDs0" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 257
+Info (12128): Elaborating entity "memoriaLEDs1" for hierarchy "fluxo_dados:FD|memoriaLEDs1:memoriaLEDs1" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 263
+Info (12128): Elaborating entity "memoriaLEDs2" for hierarchy "fluxo_dados:FD|memoriaLEDs2:memoriaLEDs2" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 269
+Info (12128): Elaborating entity "memoriaLEDs3" for hierarchy "fluxo_dados:FD|memoriaLEDs3:memoriaLEDs3" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 275
+Info (12128): Elaborating entity "memoria0" for hierarchy "fluxo_dados:FD|memoria0:memoria0" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 282
+Info (10264): Verilog HDL Case Statement information at memoria0.v(10): all case item expressions in this case statement are onehot File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/memoria0.v Line: 10
+Info (12128): Elaborating entity "memoria1" for hierarchy "fluxo_dados:FD|memoria1:memoria1" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 288
+Info (12128): Elaborating entity "memoria2" for hierarchy "fluxo_dados:FD|memoria2:memoria2" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 294
+Info (12128): Elaborating entity "memoria3" for hierarchy "fluxo_dados:FD|memoria3:memoria3" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 300
+Info (12128): Elaborating entity "mux_4x1" for hierarchy "fluxo_dados:FD|mux_4x1:muxLEDS" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 309
+Info (12128): Elaborating entity "registrador_4" for hierarchy "fluxo_dados:FD|registrador_4:registrador" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 328
+Info (12128): Elaborating entity "bigAND" for hierarchy "fluxo_dados:FD|bigAND:expectedANDbotoes" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 343
+Info (12128): Elaborating entity "registrador_1" for hierarchy "fluxo_dados:FD|registrador_1:registradorTimeout" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 361
+Info (12128): Elaborating entity "hexa7seg" for hierarchy "fluxo_dados:FD|hexa7seg:hex3_converter" File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/fluxo_dados.v Line: 388
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "fluxo_dados:FD|decodificadorAcertos:decodificadorAcertos|acertosLeds[0]" feeding internal logic into a wire File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/decodificadorAcertos.v Line: 4
-    Warning (13049): Converted tri-state buffer "fluxo_dados:FD|decodificadorAcertos:decodificadorAcertos|acertosLeds[1]" feeding internal logic into a wire File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/decodificadorAcertos.v Line: 4
+    Warning (13049): Converted tri-state buffer "fluxo_dados:FD|decodificadorAcertos:decodificadorAcertos|acertosLeds[0]" feeding internal logic into a wire File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/decodificadorAcertos.v Line: 5
+    Warning (13049): Converted tri-state buffer "fluxo_dados:FD|decodificadorAcertos:decodificadorAcertos|acertosLeds[1]" feeding internal logic into a wire File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/decodificadorAcertos.v Line: 5
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v Line: 23
-    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v Line: 24
-    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v Line: 24
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v Line: 25
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/neurosync.v Line: 25
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto/Quartus/output_files/naurosync.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 301 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 65 output pins
-    Info (21061): Implemented 227 logic cells
+Info (21057): Implemented 315 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 50 output pins
+    Info (21061): Implemented 255 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
     Info: Peak virtual memory: 4826 megabytes
-    Info: Processing ended: Fri Mar 14 09:59:20 2025
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Processing ended: Thu Mar 20 18:36:11 2025
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:08
 
 
 +------------------------------------------+

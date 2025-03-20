@@ -2,7 +2,8 @@ module neurosync (
 input clock,
 input reset,
 input jogar,
-input nivel,
+input mais,
+input menos,
 input confirma,
 input [3:0] botoes,
 
@@ -50,11 +51,11 @@ wire w_fimS,
      w_contaS,
      w_zeraA,
      w_registraA,
-     w_zeraN,
-     w_registraN,
      w_zeraL,
      w_contaT,
      w_displayFromMem,
+     w_contaM,
+     w_zeraM,
      w_registraL;
 
 wire [1:0] w_displayAddr;
@@ -67,7 +68,6 @@ unidade_controle UC (
  .jogar(jogar),
  .fimS(w_fimS),
  .confirma(confirma),
- .nivel(nivel),
  .timeout(w_timeout),
  .tem_jogada(w_tem_jogada),
  .acertouJogada(w_acertouJogada),
@@ -85,8 +85,6 @@ unidade_controle UC (
  .zeraA(w_zeraA),
  .registraA(w_registraA),
  .contaA(w_contaA),
- .zeraN(w_zeraN),
- .registraN(w_registraN),
  .zeraL(w_zeraL),
  .registraL(w_registraL),
  .displayAddr(w_displayAddr),
@@ -96,7 +94,9 @@ unidade_controle UC (
  .contaLedsOff(w_contaLedsOff),
  .contaPiscadas(w_contaPiscadas),
  .timeout_out(timeout),
- .apagarAcertos(w_apagarAcertos)
+ .apagarAcertos(w_apagarAcertos),
+ .contaM(w_contaM),
+ .zeraM(w_zeraM)
 
     //depuração
  //.db_estado(db_estado)
@@ -116,7 +116,8 @@ fluxo_dados FD (
  .contaPiscadas(w_contaPiscadas),
  .contaLedsOn(w_contaLedsOn),
  .contaLedsOff(w_contaLedsOff),
- .nivel(nivel),
+ .mais(mais),
+ .menos(menos),
  .registraR(w_registraR),
  .zeraL(w_zeraL),
  .registraL(w_registraL),
@@ -124,6 +125,8 @@ fluxo_dados FD (
  .botoes(botoes),
  .displayAddr(w_displayAddr),
  .apagarAcertos(w_apagarAcertos),
+ .contaM(w_contaM),
+ .zeraM(w_zeraM),
  .acertouJogada(w_acertouJogada),
  .jogadaAtualEQUALSacertoAnterior(w_jogadaAtualEQUALSacertoAnterior),
  .acertoAnteriorEQUALSzero(w_acertoAnteriorEQUALSzero),

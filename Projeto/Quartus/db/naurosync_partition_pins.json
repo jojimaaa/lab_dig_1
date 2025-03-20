@@ -36,66 +36,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "db_estado[0]",
-					"strict" : false
-				},
-				{
-					"name" : "db_estado[1]",
-					"strict" : false
-				},
-				{
-					"name" : "db_estado[2]",
-					"strict" : false
-				},
-				{
-					"name" : "db_estado[3]",
-					"strict" : false
-				},
-				{
-					"name" : "db_acertouJogada",
-					"strict" : false
-				},
-				{
-					"name" : "db_jogadaAtualEQUALSacertoAnterior",
-					"strict" : false
-				},
-				{
-					"name" : "db_acertoAnteriorEQUALSzero",
-					"strict" : false
-				},
-				{
-					"name" : "db_jogada[0]",
-					"strict" : false
-				},
-				{
-					"name" : "db_jogada[1]",
-					"strict" : false
-				},
-				{
-					"name" : "db_jogada[2]",
-					"strict" : false
-				},
-				{
-					"name" : "db_jogada[3]",
-					"strict" : false
-				},
-				{
-					"name" : "db_sequencia[0]",
-					"strict" : false
-				},
-				{
-					"name" : "db_sequencia[1]",
-					"strict" : false
-				},
-				{
-					"name" : "db_sequencia[2]",
-					"strict" : false
-				},
-				{
-					"name" : "db_sequencia[3]",
-					"strict" : false
-				},
-				{
 					"name" : "HEX0[0]",
 					"strict" : false
 				},
@@ -117,6 +57,10 @@
 				},
 				{
 					"name" : "HEX0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[6]",
 					"strict" : false
 				},
 				{
@@ -268,7 +212,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "botoes[3]",
+					"name" : "menos",
+					"strict" : false
+				},
+				{
+					"name" : "mais",
 					"strict" : false
 				},
 				{
@@ -276,15 +224,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "botoes[1]",
-					"strict" : false
-				},
-				{
 					"name" : "botoes[2]",
 					"strict" : false
 				},
 				{
-					"name" : "nivel",
+					"name" : "botoes[3]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[1]",
 					"strict" : false
 				}
 			]

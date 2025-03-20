@@ -11,7 +11,8 @@ module tb1;
     reg        iniciar_in = 0;
     reg        confirma_in = 0;
     reg  [3:0] chaves_in  = 4'b0000;
-    reg        nivel_in   = 0;
+    reg        mais_in   = 0;
+    reg        menos_in = 0;
 
     wire       pronto_out ;
     wire [3:0] leds_out   ;
@@ -42,7 +43,8 @@ module tb1;
         .clock(clock_in),
         .reset(reset_in),
         .jogar(iniciar_in),
-        .nivel(nivel_in),
+        .mais(mais_in),
+        .menos(menos_in),
         .confirma(confirma_in),
         .botoes(chaves_in),
         .acertos(acertos_out),
@@ -79,7 +81,8 @@ module tb1;
       reset_in   = 0;
       iniciar_in = 0;
       chaves_in  = 4'b0000;
-      nivel_in   = 0;
+      mais_in   = 0;
+      menos_in = 0;
       confirma_in = 0;
       #clockPeriod;
        
@@ -109,9 +112,21 @@ module tb1;
 
       // Teste 3. configurar nível
       caso = 3;
+      mais_in   = 1;
+      #(10*clockPeriod);
+      mais_in   = 0;
+      #(10*clockPeriod);
+      mais_in = 1;
+      #(10*clockPeriod);
+      mais_in = 0;
+      #(10*clockPeriod);
+      menos_in = 1;
+      #(10*clockPeriod);
+      menos_in = 0;
+      #(10*clockPeriod);
       confirma_in = 1;
-        #(10*clockPeriod);
-        confirma_in = 0;
+      #(10*clockPeriod);
+      confirma_in = 0;
       #(1000*clockPeriod);
 
       // Teste 4. fazer primeira jogada

@@ -1,0 +1,165 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clock'
+Slack : -9.266
+TNS   : -304.363
+
+Type  : Slow 1100mV 85C Model Setup 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : -8.149
+TNS   : -73.336
+
+Type  : Slow 1100mV 85C Model Hold 'clock'
+Slack : -6.691
+TNS   : -64.201
+
+Type  : Slow 1100mV 85C Model Hold 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : 0.611
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : -7.444
+TNS   : -66.980
+
+Type  : Slow 1100mV 85C Model Recovery 'clock'
+Slack : -4.562
+TNS   : -94.325
+
+Type  : Slow 1100mV 85C Model Removal 'clock'
+Slack : 1.156
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : 4.751
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
+Slack : -0.538
+TNS   : -129.645
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : -0.538
+TNS   : -7.197
+
+Type  : Slow 1100mV 0C Model Setup 'clock'
+Slack : -8.612
+TNS   : -295.295
+
+Type  : Slow 1100mV 0C Model Setup 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : -8.123
+TNS   : -73.107
+
+Type  : Slow 1100mV 0C Model Hold 'clock'
+Slack : -6.731
+TNS   : -64.335
+
+Type  : Slow 1100mV 0C Model Hold 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : 0.588
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : -7.413
+TNS   : -66.697
+
+Type  : Slow 1100mV 0C Model Recovery 'clock'
+Slack : -4.629
+TNS   : -88.769
+
+Type  : Slow 1100mV 0C Model Removal 'clock'
+Slack : 1.077
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : 4.787
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
+Slack : -0.552
+TNS   : -117.472
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : -0.538
+TNS   : -7.225
+
+Type  : Fast 1100mV 85C Model Setup 'clock'
+Slack : -6.033
+TNS   : -105.181
+
+Type  : Fast 1100mV 85C Model Setup 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : -3.576
+TNS   : -32.184
+
+Type  : Fast 1100mV 85C Model Hold 'clock'
+Slack : -3.501
+TNS   : -33.821
+
+Type  : Fast 1100mV 85C Model Hold 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : 0.226
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : -3.264
+TNS   : -29.368
+
+Type  : Fast 1100mV 85C Model Recovery 'clock'
+Slack : -2.021
+TNS   : -29.797
+
+Type  : Fast 1100mV 85C Model Removal 'clock'
+Slack : 0.551
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : 2.277
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
+Slack : -0.471
+TNS   : -43.507
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : 0.041
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clock'
+Slack : -4.899
+TNS   : -83.875
+
+Type  : Fast 1100mV 0C Model Setup 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : -3.454
+TNS   : -31.086
+
+Type  : Fast 1100mV 0C Model Hold 'clock'
+Slack : -3.474
+TNS   : -33.521
+
+Type  : Fast 1100mV 0C Model Hold 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : 0.198
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : -3.165
+TNS   : -28.481
+
+Type  : Fast 1100mV 0C Model Recovery 'clock'
+Slack : -1.964
+TNS   : -22.655
+
+Type  : Fast 1100mV 0C Model Removal 'clock'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : 2.207
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
+Slack : -0.459
+TNS   : -41.887
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fluxo_dados:FD|divisorClock:divisorClock|clockDiv'
+Slack : 0.062
+TNS   : 0.000
+
+------------------------------------------------------------
