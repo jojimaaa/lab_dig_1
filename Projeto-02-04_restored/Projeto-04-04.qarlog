@@ -1,0 +1,44 @@
+Quartus Prime Archive log --	C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/Projeto-04-04.qarlog
+
+Archive:	C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/Projeto-04-04.qar
+Date:		Fri Apr 04 17:05:31 2025
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/Projeto-10-03.qpf
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/Projeto-10-03.qsf
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/assignment_defaults.qdf
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/bigAND.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/binaryTObcd.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/comparador_85.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/contadorMaisMenos.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/contador_163.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/contador_m.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/decodificadorAcertos.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/displayMem.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/divisorClock.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/divisorClockFPGA.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/edge_detector.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/fluxo_dados.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/full_edge_detector.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/hexa7seg.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/memoria0.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/memoria1.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/memoria2.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/memoria3.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/memoriaFacil.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/memoriaLEDs0.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/memoriaLEDs1.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/memoriaLEDs2.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/memoriaLEDs3.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/mux4_1.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/neurosync.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/registrador_1.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/registrador_4.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/somador.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/tb1.v
+C:/Engenharia_de_Computacao_Poli_USP/5_Periodo_(2025_1)/Lab_Dig_1/Projeto-02-04_restored/unidade_controle.v
+	======= Total: 33 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

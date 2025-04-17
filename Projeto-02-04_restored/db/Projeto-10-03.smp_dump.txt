@@ -1,0 +1,17 @@
+
+State Machine - |neurosync|unidade_controle:UC|Eatual
+Name Eatual.estado_timeout Eatual.pisca_acertos_off Eatual.proxima_sequencia Eatual.final_com_acerto Eatual.is_ultima_sequencia Eatual.pisca_acertos_on Eatual.acende_segundo_acerto Eatual.proximo Eatual.comparacao Eatual.registra Eatual.espera_jogada Eatual.inicia_sequencia Eatual.preparacao Eatual.inicial 
+Eatual.inicial 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Eatual.preparacao 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+Eatual.inicia_sequencia 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+Eatual.espera_jogada 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+Eatual.registra 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+Eatual.comparacao 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+Eatual.proximo 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+Eatual.acende_segundo_acerto 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+Eatual.pisca_acertos_on 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+Eatual.is_ultima_sequencia 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+Eatual.final_com_acerto 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+Eatual.proxima_sequencia 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+Eatual.pisca_acertos_off 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+Eatual.estado_timeout 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
